@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AminoRush - Ultimate Edition</title>
+    <title>AminoRush - Beta Edition</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
@@ -326,6 +326,31 @@
         .study-card { background: rgba(15, 23, 42, 0.85); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid rgba(108, 92, 231, 0.2); border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow-lg); text-align: center; border-top: 4px solid var(--amino-color, #6C5CE7); transform: translateZ(0); }
         [data-theme="light"] .study-card { background: rgba(255, 255, 255, 0.85); }
         .study-card .aa-name { font-size: 2.2rem; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.5px; }
+        
+        .aa-structure-container {
+            margin: 16px auto;
+            max-width: 240px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: var(--radius-sm);
+            border: 1px dashed rgba(108, 92, 231, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        [data-theme="light"] .aa-structure-container { background: rgba(255, 255, 255, 0.5); border-color: rgba(108, 92, 231, 0.3); }
+        
+        .aa-structure-container::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-image: linear-gradient(rgba(108, 92, 231, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(108, 92, 231, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px; z-index: 0;
+        }
+        
+        .aa-structure-container img { position: relative; z-index: 1; max-width: 90%; max-height: 90%; object-fit: contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.1)); }
+        .structure-placeholder { position: relative; z-index: 1; color: var(--gray); font-size: 0.85rem; font-style: italic; opacity: 0.7; animation: pulse 2s infinite; }
+
         .study-card .aa-codes { font-size: 1.3rem; color: var(--blue); font-weight: 600; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
         .aa-group { display: inline-block; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; margin-bottom: 12px; color: #fff; letter-spacing: 0.5px; }
         
@@ -384,7 +409,7 @@
         <!-- Tela Inicial -->
         <div class="screen active" id="homeScreen">
             <div class="card">
-                <h1>🧬 AminoRush</h1>
+                <h1>🧬AminoRush</h1>
                 <p style="color:var(--gray); margin-bottom: 32px; font-size: 1.1rem;" data-i18n="subtitle">Domine os aminoácidos</p>
                 <button type="button" class="btn btn-primary" onclick="showScreen('modeScreen')"><span data-i18n="btnPlay">▶ JOGAR AGORA</span></button>
                 <button type="button" class="btn btn-secondary" onclick="showStudy()"><span data-i18n="btnStudy">📖 Banco de Dados</span></button>
@@ -456,6 +481,12 @@
             <div class="study-card" id="studyCard">
                 <div class="aa-group" id="studyGroup"></div>
                 <div class="aa-name" id="studyName"></div>
+                
+                <div class="aa-structure-container">
+                    <img id="studyStructure" src="" alt="Estrutura Química" style="display: none;">
+                    <div id="studyStructurePlaceholder" class="structure-placeholder" data-i18n="structPlaceholder">🧬 Estrutura Visual em Breve</div>
+                </div>
+
                 <div class="aa-codes" id="studyCodes"></div>
                 
                 <div class="study-details" id="studyDetails"></div>
@@ -574,7 +605,7 @@
                 resultTitle: "🏁 Fim da Rodada!", resultPoints: "pontos", resultAcc: "Precisão", resultCombo: "Máx Combo", reviewTitle: "📝 Revisar Erros", btnTryAgain: "🔄 Tentar Novamente", btnHome: "🏠 Menu Inicial",
                 studyTipPrefix: "💡 <strong>Dica Clássica:</strong><br>", levelNom: "MODO: NOMENCLATURA", levelProp: "MODO: PROPRIEDADES", levelStruc: "MODO: ESTRUTURA E BIOQUÍMICA", levelMixed: "MODO: DESAFIO COMPLETO",
                 timeout: "⏳ TEMPO ESGOTADO!", toastTitle: "Conquista Desbloqueada!", yourAnswer: "Sua resposta", correctAnswer: "Correta", formula: "Fórmula", levelLabel: "NÍVEL",
-                blitzComplete: "🏆 Codon Blitz Concluído!", underConstruction: "🚧 EM CONSTRUÇÃO 🚧",
+                blitzComplete: "🏆 Codon Blitz Concluído!", underConstruction: "🚧 EM CONSTRUÇÃO 🚧", structPlaceholder: "🧬 Estrutura Visual em Breve",
                 lblClass: "Classificação", lblFormula: "Fórmula Molecular", lblCodon: "Códon Genético", lblMass: "Massa Molar", lblProps: "Características"
             },
             en: {
@@ -590,7 +621,7 @@
                 resultTitle: "🏁 Round Finished!", resultPoints: "points", resultAcc: "Accuracy", resultCombo: "Max Combo", reviewTitle: "📝 Review Errors", btnTryAgain: "🔄 Try Again", btnHome: "🏠 Main Menu",
                 studyTipPrefix: "💡 <strong>Classic Tip:</strong><br>", levelNom: "MODE: NOMENCLATURE", levelProp: "MODE: PROPERTIES", levelStruc: "MODE: STRUCTURE & BIOCHEM", levelMixed: "MODE: FULL CHALLENGE",
                 timeout: "⏳ TIME'S UP!", toastTitle: "Achievement Unlocked!", yourAnswer: "Your answer", correctAnswer: "Correct", formula: "Formula", levelLabel: "LEVEL",
-                blitzComplete: "🏆 Codon Blitz Completed!", underConstruction: "🚧 UNDER CONSTRUCTION 🚧",
+                blitzComplete: "🏆 Codon Blitz Completed!", underConstruction: "🚧 UNDER CONSTRUCTION 🚧", structPlaceholder: "🧬 Visual Structure Coming Soon",
                 lblClass: "Classification", lblFormula: "Molecular Formula", lblCodon: "Genetic Codon", lblMass: "Molar Mass", lblProps: "Features"
             },
             es: {
@@ -606,33 +637,33 @@
                 resultTitle: "🏁 ¡Fin de la Ronda!", resultPoints: "puntos", resultAcc: "Precisión", resultCombo: "Combo Máx", reviewTitle: "📝 Revisar Errores", btnTryAgain: "🔄 Intentar de Nuevo", btnHome: "🏠 Menú Principal",
                 studyTipPrefix: "💡 <strong>Consejo Clásico:</strong><br>", levelNom: "MODO: NOMENCLATURA", levelProp: "MODO: PROPIEDADES", levelStruc: "MODO: ESTRUCTURA Y BIOQUÍMICA", levelMixed: "MODO: RETO COMPLETO",
                 timeout: "⏳ ¡TIEMPO AGOTADO!", toastTitle: "¡Logro Desbloqueado!", yourAnswer: "Tu respuesta", correctAnswer: "Correcta", formula: "Fórmula", levelLabel: "NIVEL",
-                blitzComplete: "🏆 ¡Codon Blitz Completado!", underConstruction: "🚧 EN CONSTRUCCIÓN 🚧",
+                blitzComplete: "🏆 ¡Codon Blitz Completado!", underConstruction: "🚧 EN CONSTRUCCIÓN 🚧", structPlaceholder: "🧬 Estructura Visual Pronto",
                 lblClass: "Clasificación", lblFormula: "Fórmula Molecular", lblCodon: "Codón Genético", lblMass: "Masa Molar", lblProps: "Características"
             }
         };
 
         // ==================== DADOS BILÍNGUES ====================
         const aminoacidos = [
-            { tres: "Gly", uma: "G", formula: "C2H5NO2", color: "#64748b", nome: { pt: "Glicina", en: "Glycine", es: "Glicina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "75,07", codons: ["GGU", "GGC", "GGA", "GGG"], classificacao: { pt: "Aminoácido alifático e hidrofóbico (não polar).", en: "Aliphatic and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Menor aminoácido", en: "Smallest amino acid", es: "Aminoácido más pequeño" }, { pt: "Sem carbono quiral", en: "No chiral carbon", es: "Sin carbono quiral" }], dica: { pt: "O menor de todos, muito flexível.", en: "The smallest of all, very flexible.", es: "El más pequeño de todos, muito flexível." } },
-            { tres: "Ala", uma: "A", formula: "C3H7NO2", color: "#0284c7", nome: { pt: "Alanina", en: "Alanine", es: "Alanina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "89,09", codons: ["GCU", "GCC", "GCA", "GCG"], classificacao: { pt: "Aminoácido alifático e hidrofóbico (não polar).", en: "Aliphatic and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Pequena", en: "Small", es: "Pequeña" }, { pt: "Hidrofóbica", en: "Hydrophobic", es: "Hidrofóbica" }], dica: { pt: "Cadeia lateral é um simple grupo metil.", en: "Side chain is a simple methyl group.", es: "La cadena lateral es un simple grupo metilo." } },
-            { tres: "Val", uma: "V", formula: "C5H11NO2", color: "#f97316", nome: { pt: "Valina", en: "Valine", es: "Valina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "117,15", codons: ["GUU", "GUC", "GUA", "GUG"], classificacao: { pt: "Aminoácido alifático, de cadeia ramificada e hidrofóbico (não polar).", en: "Aliphatic, branched-chain and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático, de cadena ramificada e hidrofóbico (no polar)." }, propriedades: [{ pt: "Cadeia ramificada", en: "Branched-chain", es: "Cadena ramificada" }, { pt: "BCAA", en: "BCAA", es: "BCAA" }], dica: { pt: "Seu nome lembra sua estrutura em V (isopropil).", en: "Its name resembles its V-shaped structure (isopropyl).", es: "Su nombre recuerda su estructura en V (isopropilo)." } },
-            { tres: "Leu", uma: "L", formula: "C6H13NO2", color: "#d97706", nome: { pt: "Leucina", en: "Leucine", es: "Leucina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "131,17", codons: ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"], classificacao: { pt: "Aminoácido alifático, de cadeia ramificada e hidrofóbico (não polar).", en: "Aliphatic, branched-chain and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático, de cadena ramificada e hidrofóbico (no polar)." }, propriedades: [{ pt: "Cadeia ramificada", en: "Branched-chain", es: "Cadena ramificada" }, { pt: "BCAA", en: "BCAA", es: "BCAA" }], dica: { pt: "BCAA mais abundante nas proteínas musculares.", en: "Most abundant BCAA in muscle proteins.", es: "El BCAA más abundante en las proteínas musculares." } },
-            { tres: "Ile", uma: "I", formula: "C6H13NO2", color: "#ea580c", nome: { pt: "Isoleucina", en: "Isoleucine", es: "Isoleucina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "131,17", codons: ["AUU", "AUC", "AUA"], classificacao: { pt: "Aminoácido alifático, de cadeia ramificada e hidrofóbico (não polar).", en: "Aliphatic, branched-chain and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático, de cadena ramificada e hidrofóbico (no polar)." }, propriedades: [{ pt: "Cadeia ramificada", en: "Branched-chain", es: "Cadena ramificada" }, { pt: "Isômero", en: "Isomer", es: "Isómero" }], dica: { pt: "Possui dois carbonos quirais.", en: "Has two chiral carbons.", es: "Tiene dos carbonos quirales." } },
-            { tres: "Met", uma: "M", formula: "C5H11NO2S", color: "#ca8a04", nome: { pt: "Metionina", en: "Methionine", es: "Metionina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "149,21", codons: ["AUG"], classificacao: { pt: "Aminoácido alifático contendo enxofre e hidrofóbico (não polar).", en: "Aliphatic, sulfur-containing and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático que contiene azufre e hidrofóbico (no polar)." }, propriedades: [{ pt: "Contém enxofre", en: "Contains sulfur", es: "Contiene azufre" }, { pt: "Inicia tradução", en: "Starts translation", es: "Inicia la traducción" }], dica: { pt: "Codificado pelo códon de início AUG.", en: "Coded by the start codon AUG.", es: "Codificado por el codón de inicio AUG." } },
-            { tres: "Pro", uma: "P", formula: "C5H9NO2", color: "#e11d48", nome: { pt: "Prolina", en: "Proline", es: "Prolina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "115,13", codons: ["CCU", "CCC", "CCA", "CCG"], classificacao: { pt: "Aminoácido cíclico (iminoácido) e hidrofóbico (não polar).", en: "Cyclic amino acid (imino acid) and hydrophobic (non-polar).", es: "Aminoácido cíclico (iminoácido) e hidrofóbico (no polar)." }, propriedades: [{ pt: "Forma anel", en: "Forms ring", es: "Forma un anillo" }, { pt: "Quebra hélices alfa", en: "Breaks alpha helices", es: "Rompe hélices alfa" }], dica: { pt: "Único iminoácido (grupo amino forma anel).", en: "The only imino acid (amino group forms a ring).", es: "El único iminoácido (el grupo amino forma un anillo)." } },
-            { tres: "Phe", uma: "F", formula: "C9H11NO2", color: "#475569", nome: { pt: "Fenilalanina", en: "Phenylalanine", es: "Fenilalanina" }, grupo: { pt: "Aromático", en: "Aromatic", es: "Aromático" }, massa: "165,19", codons: ["UUU", "UUC"], classificacao: { pt: "Aminoácido aromático e hidrofóbico (não polar).", en: "Aromatic and hydrophobic amino acid (non-polar).", es: "Aminoácido aromático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Anel aromático", en: "Aromatic ring", es: "Anillo aromático" }, { pt: "Hidrofóbica", en: "Hydrophobic", es: "Hidrofóbica" }], dica: { pt: "Alanina ligada a um anel benzênico.", en: "Alanine attached to a benzene ring.", es: "Alanina unida a un anillo bencénico." } },
-            { tres: "Trp", uma: "W", formula: "C11H12N2O2", color: "#581c87", nome: { pt: "Triptofano", en: "Tryptophan", es: "Triptófano" }, grupo: { pt: "Aromático", en: "Aromatic", es: "Aromático" }, massa: "204,23", codons: ["UGG"], classificacao: { pt: "Aminoácido aromático e hidrofóbico (não polar).", en: "Aromatic and hydrophobic amino acid (non-polar).", es: "Aminoácido aromático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Maior aromático", en: "Largest aromatic", es: "Aromático más grande" }, { pt: "Anel indólico", en: "Indole ring", es: "Anillo indólico" }], dica: { pt: "Precursor da serotonina e melatonina.", en: "Precursor to serotonin and melatonin.", es: "Precursor de la serotonina y la melatonina." } },
-            { tres: "Ser", uma: "S", formula: "C3H7NO3", color: "#0d9488", nome: { pt: "Serina", en: "Serine", es: "Serina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "105,09", codons: ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"], classificacao: { pt: "Aminoácido hidroxilado, polar e neutro (não carregado).", en: "Hydroxylated, polar and neutral amino acid (uncharged).", es: "Aminoácido hidroxilado, polar y neutro (no cargado)." }, propriedades: [{ pt: "Possui OH", en: "Has OH", es: "Tiene OH" }, { pt: "Sítio de fosforilação", en: "Phosphorylation site", es: "Sitio de fosforilación" }], dica: { pt: "Alanina com um grupo hidroxila.", en: "Alanine with a hydroxyl group.", es: "Alanina con un grupo hidroxilo." } },
-            { tres: "Thr", uma: "T", formula: "C4H9NO3", color: "#059669", nome: { pt: "Treonina", en: "Threonine", es: "Treonina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "119,12", codons: ["ACU", "ACC", "ACA", "ACG"], classificacao: { pt: "Aminoácido hidroxilado, polar e neutro (não carregado).", en: "Hydroxylated, polar and neutral amino acid (uncharged).", es: "Aminoácido hidroxilado, polar y neutro (no cargado)." }, propriedades: [{ pt: "Possui OH", en: "Has OH", es: "Tiene OH" }, { pt: "Ramificada", en: "Branched", es: "Ramificada" }], dica: { pt: "Possui dois carbonos quirais, assim como a Isoleucina.", en: "Has two chiral carbons, just like Isoleucine.", es: "Tiene dos carbonos quirales, al igual que la Isoleucina." } },
-            { tres: "Asn", uma: "N", formula: "C4H8N2O3", color: "#7c3aed", nome: { pt: "Asparagina", en: "Asparagine", es: "Asparagina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "132,12", codons: ["AAU", "AAC"], classificacao: { pt: "Aminoácido com grupo amida, polar e neutro (não carregado).", en: "Amide-containing, polar and neutral amino acid (uncharged).", es: "Aminoácido con grupo amida, polar y neutro (no cargado)." }, propriedades: [{ pt: "Amida", en: "Amide", es: "Amida" }, { pt: "Sítio de glicosilação", en: "Glycosylation site", es: "Sitio de glicosilación" }], dica: { pt: "Derivado amida do ácido aspártico.", en: "Amide derivative of aspartic acid.", es: "Derivado amida del ácido aspártico." } },
-            { tres: "Gln", uma: "Q", formula: "C5H10N2O3", color: "#9333ea", nome: { pt: "Glutamina", en: "Glutamine", es: "Glutamina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "146,14", codons: ["CAA", "CAG"], classificacao: { pt: "Aminoácido com grupo amida, polar e neutro (não carregado).", en: "Amide-containing, polar and neutral amino acid (uncharged).", es: "Aminoácido con grupo amida, polar y neutro (no cargado)." }, propriedades: [{ pt: "Amida maior", en: "Larger amide", es: "Amida más grande" }, { pt: "Transporta amônia", en: "Transports ammonia", es: "Transporta amoníaco" }], dica: { pt: "Aminoácido livre mais abundante no sangue.", en: "Most abundant free amino acid in the blood.", es: "El aminoácido libre más abundante en la sangre." } },
-            { tres: "Cys", uma: "C", formula: "C3H7NO2S", color: "#eab308", nome: { pt: "Cisteína", en: "Cysteine", es: "Cisteína" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "121,16", codons: ["UGU", "UGC"], classificacao: { pt: "Aminoácido contendo enxofre (tiol), polar e neutro (não carregado).", en: "Sulfur-containing (thiol), polar and neutral amino acid (uncharged).", es: "Aminoácido que contiene azufre (tiol), polar y neutro (no cargado)." }, propriedades: [{ pt: "Grupo SH (tiol)", en: "SH group (thiol)", es: "Grupo SH (tiol)" }, { pt: "Pontes dissulfeto", en: "Disulfide bonds", es: "Puentes disulfuro" }], dica: { pt: "Seu grupo tiol oxida para formar cistina.", en: "Its thiol group oxidizes to form cystine.", es: "Su grupo tiol se oxida para formar cistina." } },
-            { tres: "Tyr", uma: "Y", formula: "C9H11NO3", color: "#15803d", nome: { pt: "Tirosina", en: "Tyrosine", es: "Tirosina" }, grupo: { pt: "Aromático", en: "Aromatic", es: "Aromático" }, massa: "181,19", codons: ["UAU", "UAC"], classificacao: { pt: "Aminoácido aromático hidroxilado, polar e neutro (não carregado).", en: "Hydroxylated aromatic, polar and neutral amino acid (uncharged).", es: "Aminoácido aromático hidroxilado, polar y neutro (no cargado)." }, propriedades: [{ pt: "Aromático + OH", en: "Aromatic + OH", es: "Aromático + OH" }], dica: { pt: "Precursor da dopamina, adrenalina e melanina.", en: "Precursor to dopamine, adrenaline, and melanin.", es: "Precursor de la dopamina, adrenalina y melanina." } },
-            { tres: "Asp", uma: "D", formula: "C4H7NO4", color: "#c026d3", nome: { pt: "Aspartato", en: "Aspartate", es: "Aspartato" }, grupo: { pt: "Ácido", en: "Acidic", es: "Ácido" }, massa: "133,10", codons: ["GAU", "GAC"], classificacao: { pt: "Aminoácido ácido, polar e com carga negativa.", en: "Acidic, polar amino acid with negative charge.", es: "Aminoácido ácido, polar y con carga negativa." }, propriedades: [{ pt: "Carga negativa", en: "Negative charge", es: "Carga negativa" }, { pt: "Ácido dicarboxílico", en: "Dicarboxylic acid", es: "Ácido dicarboxílico" }], dica: { pt: "Doador de nitrogênio no ciclo da ureia.", en: "Nitrogen donor in the urea cycle.", es: "Donante de nitrógeno en el ciclo de la urea." } },
-            { tres: "Glu", uma: "E", formula: "C5H9NO4", color: "#db2777", nome: { pt: "Glutamato", en: "Glutamate", es: "Glutamato" }, grupo: { pt: "Ácido", en: "Acidic", es: "Ácido" }, massa: "147,13", codons: ["GAA", "GAG"], classificacao: { pt: "Aminoácido ácido, polar e com carga negativa.", en: "Acidic, polar amino acid with negative charge.", es: "Aminoácido ácido, polar y con carga negativa." }, propriedades: [{ pt: "Carga negativa", en: "Negative charge", es: "Carga negativa" }, { pt: "Neurotransmissor", en: "Neurotransmitter", es: "Neurotransmisor" }], dica: { pt: "Principal neurotransmissor excitatório do cérebro.", en: "Main excitatory neurotransmitter in the brain.", es: "Principal neurotransmisor excitatorio del cerebro." } },
-            { tres: "Lys", uma: "K", formula: "C6H14N2O2", color: "#3b82f6", nome: { pt: "Lisina", en: "Lysine", es: "Lisina" }, grupo: { pt: "Básico", en: "Basic", es: "Básico" }, massa: "146,19", codons: ["AAA", "AAG"], classificacao: { pt: "Aminoácido básico, polar e com carga positiva.", en: "Basic, polar amino acid with positive charge.", es: "Aminoácido básico, polar y con carga positiva." }, propriedades: [{ pt: "Carga positiva", en: "Positive charge", es: "Carga positiva" }, { pt: "Amino extra", en: "Extra amino", es: "Amino extra" }], dica: { pt: "Cadeia lateral termina em um grupo épsilon-amino.", en: "Side chain ends in an epsilon-amino group.", es: "La cadena lateral termina en un grupo épsilon-amino." } },
-            { tres: "Arg", uma: "R", formula: "C6H14N4O2", color: "#4f46e5", nome: { pt: "Arginina", en: "Arginine", es: "Arginina" }, grupo: { pt: "Básico", en: "Basic", es: "Básico" }, massa: "174,20", codons: ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"], classificacao: { pt: "Aminoácido básico, polar e com carga positiva.", en: "Basic, polar amino acid with positive charge.", es: "Aminoácido básico, polar y con carga positiva." }, propriedades: [{ pt: "Carga positiva", en: "Positive charge", es: "Carga positiva" }, { pt: "Grupo guanidino", en: "Guanidino group", es: "Grupo guanidino" }], dica: { pt: "Aminoácido mais básico, precursor do óxido nítrico.", en: "Most basic amino acid, precursor to nitric oxide.", es: "El aminoácido más básico, precursor del óxido nítrico." } },
-            { tres: "His", uma: "H", formula: "C6H9N3O2", color: "#2563eb", nome: { pt: "Histidina", en: "Histidine", es: "Histidina" }, grupo: { pt: "Básico", en: "Basic", es: "Básico" }, massa: "155,15", codons: ["CAU", "CAC"], classificacao: { pt: "Aminoácido básico, polar e parcialmente carregado positivamente.", en: "Basic, polar amino acid (can be positively charged).", es: "Aminoácido básico, polar y parcialmente cargado positivamente." }, propriedades: [{ pt: "Tampão fisiológico", en: "Physiological buffer", es: "Tampón fisiológico" }, { pt: "Anel imidazol", en: "Imidazole ring", es: "Anillo imidazol" }], dica: { pt: "Pode ser neutra ou positiva em pH fisiológico (pKa ~6.0).", en: "Can be neutral or positive at physiological pH (pKa ~6.0).", es: "Puede ser neutra o positiva a pH fisiológico (pKa ~6.0)." } }
+            { tres: "Gly", uma: "G", imagem: "", formula: "C2H5NO2", color: "#64748b", nome: { pt: "Glicina", en: "Glycine", es: "Glicina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "75,07", codons: ["GGU", "GGC", "GGA", "GGG"], classificacao: { pt: "Aminoácido alifático e hidrofóbico (não polar).", en: "Aliphatic and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Menor aminoácido", en: "Smallest amino acid", es: "Aminoácido más pequeño" }, { pt: "Sem carbono quiral", en: "No chiral carbon", es: "Sin carbono quiral" }], dica: { pt: "O menor de todos, muito flexível.", en: "The smallest of all, very flexible.", es: "El más pequeño de todos, muito flexível." } },
+            { tres: "Ala", uma: "A", imagem: "", formula: "C3H7NO2", color: "#0284c7", nome: { pt: "Alanina", en: "Alanine", es: "Alanina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "89,09", codons: ["GCU", "GCC", "GCA", "GCG"], classificacao: { pt: "Aminoácido alifático e hidrofóbico (não polar).", en: "Aliphatic and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Pequena", en: "Small", es: "Pequeña" }, { pt: "Hidrofóbica", en: "Hydrophobic", es: "Hidrofóbica" }], dica: { pt: "Cadeia lateral é um simple grupo metil.", en: "Side chain is a simple methyl group.", es: "La cadena lateral es un simple grupo metilo." } },
+            { tres: "Val", uma: "V", imagem: "", formula: "C5H11NO2", color: "#f97316", nome: { pt: "Valina", en: "Valine", es: "Valina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "117,15", codons: ["GUU", "GUC", "GUA", "GUG"], classificacao: { pt: "Aminoácido alifático, de cadeia ramificada e hidrofóbico (não polar).", en: "Aliphatic, branched-chain and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático, de cadena ramificada e hidrofóbico (no polar)." }, propriedades: [{ pt: "Cadeia ramificada", en: "Branched-chain", es: "Cadena ramificada" }, { pt: "BCAA", en: "BCAA", es: "BCAA" }], dica: { pt: "Seu nome lembra sua estrutura em V (isopropil).", en: "Its name resembles its V-shaped structure (isopropyl).", es: "Su nombre recuerda su estructura en V (isopropilo)." } },
+            { tres: "Leu", uma: "L", imagem: "", formula: "C6H13NO2", color: "#d97706", nome: { pt: "Leucina", en: "Leucine", es: "Leucina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "131,17", codons: ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"], classificacao: { pt: "Aminoácido alifático, de cadeia ramificada e hidrofóbico (não polar).", en: "Aliphatic, branched-chain and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático, de cadena ramificada e hidrofóbico (no polar)." }, propriedades: [{ pt: "Cadeia ramificada", en: "Branched-chain", es: "Cadena ramificada" }, { pt: "BCAA", en: "BCAA", es: "BCAA" }], dica: { pt: "BCAA mais abundante nas proteínas musculares.", en: "Most abundant BCAA in muscle proteins.", es: "El BCAA más abundante en las proteínas musculares." } },
+            { tres: "Ile", uma: "I", imagem: "", formula: "C6H13NO2", color: "#ea580c", nome: { pt: "Isoleucina", en: "Isoleucine", es: "Isoleucina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "131,17", codons: ["AUU", "AUC", "AUA"], classificacao: { pt: "Aminoácido alifático, de cadeia ramificada e hidrofóbico (não polar).", en: "Aliphatic, branched-chain and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático, de cadena ramificada e hidrofóbico (no polar)." }, propriedades: [{ pt: "Cadeia ramificada", en: "Branched-chain", es: "Cadena ramificada" }, { pt: "Isômero", en: "Isomer", es: "Isómero" }], dica: { pt: "Possui dois carbonos quirais.", en: "Has two chiral carbons.", es: "Tiene dos carbonos quirales." } },
+            { tres: "Met", uma: "M", imagem: "", formula: "C5H11NO2S", color: "#ca8a04", nome: { pt: "Metionina", en: "Methionine", es: "Metionina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "149,21", codons: ["AUG"], classificacao: { pt: "Aminoácido alifático contendo enxofre e hidrofóbico (não polar).", en: "Aliphatic, sulfur-containing and hydrophobic amino acid (non-polar).", es: "Aminoácido alifático que contiene azufre e hidrofóbico (no polar)." }, propriedades: [{ pt: "Contém enxofre", en: "Contains sulfur", es: "Contiene azufre" }, { pt: "Inicia tradução", en: "Starts translation", es: "Inicia la traducción" }], dica: { pt: "Codificado pelo códon de início AUG.", en: "Coded by the start codon AUG.", es: "Codificado por el codón de inicio AUG." } },
+            { tres: "Pro", uma: "P", imagem: "", formula: "C5H9NO2", color: "#e11d48", nome: { pt: "Prolina", en: "Proline", es: "Prolina" }, grupo: { pt: "Apolar", en: "Nonpolar", es: "Apolar" }, massa: "115,13", codons: ["CCU", "CCC", "CCA", "CCG"], classificacao: { pt: "Aminoácido cíclico (iminoácido) e hidrofóbico (não polar).", en: "Cyclic amino acid (imino acid) and hydrophobic (non-polar).", es: "Aminoácido cíclico (iminoácido) e hidrofóbico (no polar)." }, propriedades: [{ pt: "Forma anel", en: "Forms ring", es: "Forma un anillo" }, { pt: "Quebra hélices alfa", en: "Breaks alpha helices", es: "Rompe hélices alfa" }], dica: { pt: "Único iminoácido (grupo amino forma anel).", en: "The only imino acid (amino group forms a ring).", es: "El único iminoácido (el grupo amino forma un anillo)." } },
+            { tres: "Phe", uma: "F", imagem: "", formula: "C9H11NO2", color: "#475569", nome: { pt: "Fenilalanina", en: "Phenylalanine", es: "Fenilalanina" }, grupo: { pt: "Aromático", en: "Aromatic", es: "Aromático" }, massa: "165,19", codons: ["UUU", "UUC"], classificacao: { pt: "Aminoácido aromático e hidrofóbico (não polar).", en: "Aromatic and hydrophobic amino acid (non-polar).", es: "Aminoácido aromático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Anel aromático", en: "Aromatic ring", es: "Anillo aromático" }, { pt: "Hidrofóbica", en: "Hydrophobic", es: "Hidrofóbica" }], dica: { pt: "Alanina ligada a um anel benzênico.", en: "Alanine attached to a benzene ring.", es: "Alanina unida a un anillo bencénico." } },
+            { tres: "Trp", uma: "W", imagem: "", formula: "C11H12N2O2", color: "#581c87", nome: { pt: "Triptofano", en: "Tryptophan", es: "Triptófano" }, grupo: { pt: "Aromático", en: "Aromatic", es: "Aromático" }, massa: "204,23", codons: ["UGG"], classificacao: { pt: "Aminoácido aromático e hidrofóbico (não polar).", en: "Aromatic and hydrophobic amino acid (non-polar).", es: "Aminoácido aromático e hidrofóbico (no polar)." }, propriedades: [{ pt: "Maior aromático", en: "Largest aromatic", es: "Aromático más grande" }, { pt: "Anel indólico", en: "Indole ring", es: "Anillo indólico" }], dica: { pt: "Precursor da serotonina e melatonina.", en: "Precursor to serotonin and melatonin.", es: "Precursor de la serotonina y la melatonina." } },
+            { tres: "Ser", uma: "S", imagem: "", formula: "C3H7NO3", color: "#0d9488", nome: { pt: "Serina", en: "Serine", es: "Serina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "105,09", codons: ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"], classificacao: { pt: "Aminoácido hidroxilado, polar e neutro (não carregado).", en: "Hydroxylated, polar and neutral amino acid (uncharged).", es: "Aminoácido hidroxilado, polar y neutro (no cargado)." }, propriedades: [{ pt: "Possui OH", en: "Has OH", es: "Tiene OH" }, { pt: "Sítio de fosforilação", en: "Phosphorylation site", es: "Sitio de fosforilación" }], dica: { pt: "Alanina com um grupo hidroxila.", en: "Alanine with a hydroxyl group.", es: "Alanina con un grupo hidroxilo." } },
+            { tres: "Thr", uma: "T", imagem: "", formula: "C4H9NO3", color: "#059669", nome: { pt: "Treonina", en: "Threonine", es: "Treonina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "119,12", codons: ["ACU", "ACC", "ACA", "ACG"], classificacao: { pt: "Aminoácido hidroxilado, polar e neutro (não carregado).", en: "Hydroxylated, polar and neutral amino acid (uncharged).", es: "Aminoácido hidroxilado, polar y neutro (no cargado)." }, propriedades: [{ pt: "Possui OH", en: "Has OH", es: "Tiene OH" }, { pt: "Ramificada", en: "Branched", es: "Ramificada" }], dica: { pt: "Possui dois carbonos quirais, assim como a Isoleucina.", en: "Has two chiral carbons, just like Isoleucine.", es: "Tiene dos carbonos quirales, al igual que la Isoleucina." } },
+            { tres: "Asn", uma: "N", imagem: "", formula: "C4H8N2O3", color: "#7c3aed", nome: { pt: "Asparagina", en: "Asparagine", es: "Asparagina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "132,12", codons: ["AAU", "AAC"], classificacao: { pt: "Aminoácido com grupo amida, polar e neutro (não carregado).", en: "Amide-containing, polar and neutral amino acid (uncharged).", es: "Aminoácido con grupo amida, polar y neutro (no cargado)." }, propriedades: [{ pt: "Amida", en: "Amide", es: "Amida" }, { pt: "Sítio de glicosilação", en: "Glycosylation site", es: "Sitio de glicosilación" }], dica: { pt: "Derivado amida do ácido aspártico.", en: "Amide derivative of aspartic acid.", es: "Derivado amida del ácido aspártico." } },
+            { tres: "Gln", uma: "Q", imagem: "", formula: "C5H10N2O3", color: "#9333ea", nome: { pt: "Glutamina", en: "Glutamine", es: "Glutamina" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "146,14", codons: ["CAA", "CAG"], classificacao: { pt: "Aminoácido com grupo amida, polar e neutro (não carregado).", en: "Amide-containing, polar and neutral amino acid (uncharged).", es: "Aminoácido con grupo amida, polar y neutro (no cargado)." }, propriedades: [{ pt: "Amida maior", en: "Larger amide", es: "Amida más grande" }, { pt: "Transporta amônia", en: "Transports ammonia", es: "Transporta amoníaco" }], dica: { pt: "Aminoácido livre mais abundante no sangue.", en: "Most abundant free amino acid in the blood.", es: "El aminoácido libre más abundante en la sangre." } },
+            { tres: "Cys", uma: "C", imagem: "", formula: "C3H7NO2S", color: "#eab308", nome: { pt: "Cisteína", en: "Cysteine", es: "Cisteína" }, grupo: { pt: "Polar", en: "Polar", es: "Polar" }, massa: "121,16", codons: ["UGU", "UGC"], classificacao: { pt: "Aminoácido contendo enxofre (tiol), polar e neutro (não carregado).", en: "Sulfur-containing (thiol), polar and neutral amino acid (uncharged).", es: "Aminoácido que contiene azufre (tiol), polar y neutro (no cargado)." }, propriedades: [{ pt: "Grupo SH (tiol)", en: "SH group (thiol)", es: "Grupo SH (tiol)" }, { pt: "Pontes dissulfeto", en: "Disulfide bonds", es: "Puentes disulfuro" }], dica: { pt: "Seu grupo tiol oxida para formar cistina.", en: "Its thiol group oxidizes to form cystine.", es: "Su grupo tiol se oxida para formar cistina." } },
+            { tres: "Tyr", uma: "Y", imagem: "", formula: "C9H11NO3", color: "#15803d", nome: { pt: "Tirosina", en: "Tyrosine", es: "Tirosina" }, grupo: { pt: "Aromático", en: "Aromatic", es: "Aromático" }, massa: "181,19", codons: ["UAU", "UAC"], classificacao: { pt: "Aminoácido aromático hidroxilado, polar e neutro (não carregado).", en: "Hydroxylated aromatic, polar and neutral amino acid (uncharged).", es: "Aminoácido aromático hidroxilado, polar y neutro (no cargado)." }, propriedades: [{ pt: "Aromático + OH", en: "Aromatic + OH", es: "Aromático + OH" }], dica: { pt: "Precursor da dopamina, adrenalina e melanina.", en: "Precursor to dopamine, adrenaline, and melanin.", es: "Precursor de la dopamina, adrenalina y melanina." } },
+            { tres: "Asp", uma: "D", imagem: "", formula: "C4H7NO4", color: "#c026d3", nome: { pt: "Aspartato", en: "Aspartate", es: "Aspartato" }, grupo: { pt: "Ácido", en: "Acidic", es: "Ácido" }, massa: "133,10", codons: ["GAU", "GAC"], classificacao: { pt: "Aminoácido ácido, polar e com carga negativa.", en: "Acidic, polar amino acid with negative charge.", es: "Aminoácido ácido, polar y con carga negativa." }, propriedades: [{ pt: "Carga negativa", en: "Negative charge", es: "Carga negativa" }, { pt: "Ácido dicarboxílico", en: "Dicarboxylic acid", es: "Ácido dicarboxílico" }], dica: { pt: "Doador de nitrogênio no ciclo da ureia.", en: "Nitrogen donor in the urea cycle.", es: "Donante de nitrógeno en el ciclo de la urea." } },
+            { tres: "Glu", uma: "E", imagem: "", formula: "C5H9NO4", color: "#db2777", nome: { pt: "Glutamato", en: "Glutamate", es: "Glutamato" }, grupo: { pt: "Ácido", en: "Acidic", es: "Ácido" }, massa: "147,13", codons: ["GAA", "GAG"], classificacao: { pt: "Aminoácido ácido, polar e com carga negativa.", en: "Acidic, polar amino acid with negative charge.", es: "Aminoácido ácido, polar y con carga negativa." }, propriedades: [{ pt: "Carga negativa", en: "Negative charge", es: "Carga negativa" }, { pt: "Neurotransmissor", en: "Neurotransmitter", es: "Neurotransmisor" }], dica: { pt: "Principal neurotransmissor excitatório do cérebro.", en: "Main excitatory neurotransmitter in the brain.", es: "Principal neurotransmisor excitatorio del cerebro." } },
+            { tres: "Lys", uma: "K", imagem: "", formula: "C6H14N2O2", color: "#3b82f6", nome: { pt: "Lisina", en: "Lysine", es: "Lisina" }, grupo: { pt: "Básico", en: "Basic", es: "Básico" }, massa: "146,19", codons: ["AAA", "AAG"], classificacao: { pt: "Aminoácido básico, polar e com carga positiva.", en: "Basic, polar amino acid with positive charge.", es: "Aminoácido básico, polar y con carga positiva." }, propriedades: [{ pt: "Carga positiva", en: "Positive charge", es: "Carga positiva" }, { pt: "Amino extra", en: "Extra amino", es: "Amino extra" }], dica: { pt: "Cadeia lateral termina em um grupo épsilon-amino.", en: "Side chain ends in an epsilon-amino group.", es: "La cadena lateral termina en un grupo épsilon-amino." } },
+            { tres: "Arg", uma: "R", imagem: "", formula: "C6H14N4O2", color: "#4f46e5", nome: { pt: "Arginina", en: "Arginine", es: "Arginina" }, grupo: { pt: "Básico", en: "Basic", es: "Básico" }, massa: "174,20", codons: ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"], classificacao: { pt: "Aminoácido básico, polar e com carga positiva.", en: "Basic, polar amino acid with positive charge.", es: "Aminoácido básico, polar y con carga positiva." }, propriedades: [{ pt: "Carga positiva", en: "Positive charge", es: "Carga positiva" }, { pt: "Grupo guanidino", en: "Guanidino group", es: "Grupo guanidino" }], dica: { pt: "Aminoácido mais básico, precursor do óxido nítrico.", en: "Most basic amino acid, precursor to nitric oxide.", es: "El aminoácido más básico, precursor del óxido nítrico." } },
+            { tres: "His", uma: "H", imagem: "", formula: "C6H9N3O2", color: "#2563eb", nome: { pt: "Histidina", en: "Histidine", es: "Histidina" }, grupo: { pt: "Básico", en: "Basic", es: "Básico" }, massa: "155,15", codons: ["CAU", "CAC"], classificacao: { pt: "Aminoácido básico, polar e parcialmente carregado positivamente.", en: "Basic, polar amino acid (can be positively charged).", es: "Aminoácido básico, polar y parcialmente cargado positivamente." }, propriedades: [{ pt: "Tampão fisiológico", en: "Physiological buffer", es: "Tampón fisiológico" }, { pt: "Anel imidazol", en: "Imidazole ring", es: "Anillo imidazol" }], dica: { pt: "Pode ser neutra ou positiva em pH fisiológico (pKa ~6.0).", en: "Can be neutral or positive at physiological pH (pKa ~6.0).", es: "Puede ser neutra o positiva a pH fisiológico (pKa ~6.0)." } }
         ];
 
         // ==================== CONQUISTAS ====================
@@ -698,7 +729,7 @@
                     const buttons = document.querySelectorAll('#optionsGrid .btn');
                     buttons.forEach((btn, idx) => {
                         const opt = q.options[idx];
-                        btn.textContent = typeof opt === 'object' ? opt[state.lang] : opt;
+                        btn.innerHTML = typeof opt === 'object' ? opt[state.lang] : opt;
                     });
                 }
                 const levelMap = { 'nom': 'levelNom', 'prop': 'levelProp', 'struc': 'levelStruc', 'mixed': 'levelMixed' };
@@ -710,7 +741,7 @@
                 const buttons = document.querySelectorAll('#arcadeGrid .btn');
                 buttons.forEach(btn => {
                     const obj = aminoacidos.find(a => a.nome.pt === btn.getAttribute('data-pt-name'));
-                    if(obj) btn.textContent = obj.nome[state.lang];
+                    if(obj) btn.innerHTML = obj.nome[state.lang];
                 });
             }
 
@@ -959,24 +990,34 @@
                     const code = Math.random() > 0.5 ? correctAA.tres : correctAA.uma;
                     qText = { pt: `Qual aminoácido tem a sigla <strong>${code}</strong>?`, en: `Which amino acid has the code <strong>${code}</strong>?`, es: `¿Qué aminoácido tiene la sigla <strong>${code}</strong>?` };
                     correct = correctAA.nome; options = getUnique(correct, 'nome', 4); break;
+                
+                // MUDANÇA AQUI: Filtro para garantir alternativas exclusivas
                 case 'property_to_name':
                     const prop = correctAA.propriedades[Math.floor(Math.random() * correctAA.propriedades.length)];
                     qText = { pt: `Qual aminoácido possui a característica:<br><span style="color:var(--blue)">${prop.pt}</span>?`, en: `Which amino acid has the characteristic:<br><span style="color:var(--blue)">${prop.en}</span>?`, es: `¿Qué aminoácido tiene la característica:<br><span style="color:var(--blue)">${prop.es}</span>?` };
-                    correct = correctAA.nome; options = getUnique(correct, 'nome', 4); break;
+                    correct = correctAA.nome; 
+                    const wrongNamesProp = aminoacidos.filter(a => !a.propriedades.some(p => p.en === prop.en)).map(a => a.nome);
+                    options = shuffle([correct, ...shuffle(wrongNamesProp).slice(0, 3)]);
+                    break;
                 case 'name_to_group':
                     qText = { pt: `Qual o grupo principal do aminoácido <strong>${correctAA.nome.pt}</strong>?`, en: `What is the main group of the amino acid <strong>${correctAA.nome.en}</strong>?`, es: `¿Cuál es el grupo principal del aminoácido <strong>${correctAA.nome.es}</strong>?` };
                     correct = correctAA.grupo; options = getUnique(correct, 'grupo', 4); break;
+                
+                // MUDANÇA AQUI: Adicionado slice(0,3)
                 case 'group_to_name':
                     qText = { pt: `Qual destes pertence ao grupo <strong>${correctAA.grupo.pt}</strong>?`, en: `Which of these belongs to the <strong>${correctAA.grupo.en}</strong> group?`, es: `¿Cuál de estos pertenece al grupo <strong>${correctAA.grupo.es}</strong>?` };
                     correct = correctAA.nome;
                     const others = aminoacidos.filter(a => a.grupo.en !== correctAA.grupo.en).map(a => a.nome);
-                    options = shuffle([correct, ...shuffle(others).slice(0, 3)]); break;
+                    options = shuffle([correct, ...shuffle(others).slice(0, 3)]); 
+                    break;
                 case 'dica_to_name':
                     qText = { pt: `💡 <em>${correctAA.dica.pt}</em><br>Qual é o aminoácido?`, en: `💡 <em>${correctAA.dica.en}</em><br>Which amino acid is it?`, es: `💡 <em>${correctAA.dica.es}</em><br>¿Cuál es el aminoácido?` };
                     correct = correctAA.nome; options = getUnique(correct, 'nome', 4); break;
                 case 'name_to_dica':
                     qText = { pt: `Qual destas é uma verdade bioquímica sobre a <strong>${correctAA.nome.pt}</strong>?`, en: `Which of these is a biochemical truth about <strong>${correctAA.nome.en}</strong>?`, es: `¿Cuál de estas es una verdad bioquímica sobre la <strong>${correctAA.nome.es}</strong>?` };
                     correct = correctAA.dica; options = getUnique(correct, 'dica', 4); break;
+                
+                // MUDANÇA AQUI: Tratamento para evitar duplo formatação/bugs
                 case 'formula_to_name':
                     qText = { pt: `Qual aminoácido possui a fórmula molecular:<br><strong>${formatFormula(correctAA.formula)}</strong>?`, en: `Which amino acid has the molecular formula:<br><strong>${formatFormula(correctAA.formula)}</strong>?`, es: `¿Qué aminoácido tiene la fórmula molecular:<br><strong>${formatFormula(correctAA.formula)}</strong>?` };
                     correct = correctAA.nome; 
@@ -984,7 +1025,11 @@
                     options = shuffle([correct, ...shuffle(nomesSeguros).slice(0, 3)]); break;
                 case 'name_to_formula':
                     qText = { pt: `Qual é a fórmula molecular da <strong>${correctAA.nome.pt}</strong>?`, en: `What is the molecular formula of <strong>${correctAA.nome.en}</strong>?`, es: `¿Cuál es la fórmula molecular de la <strong>${correctAA.nome.es}</strong>?` };
-                    correct = formatFormula(correctAA.formula); options = getUnique(correct, 'formula', 4).map(f => formatFormula(f)); break;
+                    correct = formatFormula(correctAA.formula); 
+                    const wrongFormulas = aminoacidos.filter(a => a.formula !== correctAA.formula).map(a => a.formula);
+                    const uniqueWrongFormulas = [...new Set(wrongFormulas)];
+                    options = shuffle([correct, ...shuffle(uniqueWrongFormulas).slice(0, 3).map(f => formatFormula(f))]); 
+                    break;
             }
             return { questionText: qText, correctAnswer: correct, options, correctAA, type };
         }
@@ -1074,7 +1119,6 @@
             else { bar.classList.add('timer-danger'); pill.classList.add('urgent'); card.classList.add('danger-mode');}
         }
 
-        // Conquista de usar Power Ups
         function checkPowerUserAchievementNormal() { if (state.used5050 && state.usedFreeze) unlockAchievement('power_user'); }
         function checkPowerUserAchievementArcade() { if (state.usedRadar && state.usedFreeze) unlockAchievement('power_user'); }
 
@@ -1105,7 +1149,6 @@
             document.getElementById('timerBar').classList.add('timer-frozen'); document.getElementById('gameCard').classList.remove('danger-mode');
         }
 
-        // Poderes Arcade
         function useArcadeFreeze() {
             if(state.powerups.freeze <= 0 || state.timeLeft <= 0) return;
             state.powerups.freeze--; state.usedFreeze = true;
@@ -1356,7 +1399,7 @@
             if(arcadeState.lives <= 0) {
                 endArcade();
             } else {
-                state.timeLeft = 5; // Reinicia com 5 segundos como penalidade
+                state.timeLeft = 5; 
                 document.getElementById('arcadeCard').classList.add('danger-mode');
                 setTimeout(() => document.getElementById('arcadeCard').classList.remove('danger-mode'), 400);
                 updateArcadeTimerUI();
@@ -1405,6 +1448,21 @@
             else grp.classList.add('tag-aromatic');
             
             document.getElementById('studyName').textContent = aa.nome[state.lang];
+            
+            // Image handling
+            const imgEl = document.getElementById('studyStructure');
+            const placeholderEl = document.getElementById('studyStructurePlaceholder');
+
+            if (aa.imagem) {
+                imgEl.src = aa.imagem;
+                imgEl.style.display = 'block';
+                placeholderEl.style.display = 'none';
+            } else {
+                imgEl.src = '';
+                imgEl.style.display = 'none';
+                placeholderEl.style.display = 'block';
+            }
+
             document.getElementById('studyCodes').textContent = `${aa.tres} | ${aa.uma}`;
             
             const propsHtml = aa.propriedades.map(p => p[state.lang]).join(', ');
