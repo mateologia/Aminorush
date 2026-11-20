@@ -1,0 +1,145 @@
+{
+  "first_blood": {
+    "icon": "🩸",
+    "title": {
+      "pt-BR": "Primeiro Sangue",
+      "en-US": "First Blood",
+      "es-ES": "Primera Sangre"
+    },
+    "desc": {
+      "pt-BR": "Acertou sua primeira pergunta.",
+      "en-US": "Got your first question right.",
+      "es-ES": "Acertaste tu primera pregunta."
+    }
+  },
+  "speed_demon": {
+    "icon": "⚡",
+    "title": {
+      "pt-BR": "Velocista",
+      "en-US": "Speed Demon",
+      "es-ES": "Velocista"
+    },
+    "desc": {
+      "pt-BR": "Acertou em menos de 2 segundos.",
+      "en-US": "Answered correctly in under 2 seconds.",
+      "es-ES": "Respondiste correctamente en menos de 2 segundos."
+    }
+  },
+  "combo_master": {
+    "icon": "🔥",
+    "title": {
+      "pt-BR": "Mestre do Combo",
+      "en-US": "Combo Master",
+      "es-ES": "Maestro del Combo"
+    },
+    "desc": {
+      "pt-BR": "Alcançou um combo de 8x.",
+      "en-US": "Reached an 8x combo.",
+      "es-ES": "Alcanzaste un combo de 8x."
+    }
+  },
+  "power_user": {
+    "icon": "🛠️",
+    "title": {
+      "pt-BR": "Estrategista",
+      "en-US": "Power User",
+      "es-ES": "Estratega"
+    },
+    "desc": {
+      "pt-BR": "Usou os dois power-ups na mesma partida.",
+      "en-US": "Used both power-ups in the same match.",
+      "es-ES": "Usaste ambos power-ups en la misma partida."
+    }
+  },
+  "amino_trainee": {
+    "icon": "👶",
+    "title": {
+      "pt-BR": "Amino Trainee",
+      "en-US": "Amino Trainee",
+      "es-ES": "Amino Trainee"
+    },
+    "desc": {
+      "pt-BR": "100% de acerto no modo Nomenclatura!",
+      "en-US": "100% accuracy in Nomenclature mode!",
+      "es-ES": "¡100% de aciertos en el modo Nomenclatura!"
+    }
+  },
+  "amino_sapiente": {
+    "icon": "🧠",
+    "title": {
+      "pt-BR": "Amino Sapiente",
+      "en-US": "Amino Scholar",
+      "es-ES": "Amino Sabio"
+    },
+    "desc": {
+      "pt-BR": "100% de acerto no modo Propriedades!",
+      "en-US": "100% accuracy in Properties mode!",
+      "es-ES": "¡100% de aciertos en el modo Propiedades!"
+    }
+  },
+  "amino_boss": {
+    "icon": "💼",
+    "title": {
+      "pt-BR": "Amino Boss",
+      "en-US": "Amino Boss",
+      "es-ES": "Amino Boss"
+    },
+    "desc": {
+      "pt-BR": "100% de acerto no modo Estrutura!",
+      "en-US": "100% accuracy in Structure mode!",
+      "es-ES": "¡100% de aciertos en el modo Estructura!"
+    }
+  },
+  "amino_master": {
+    "icon": "👑",
+    "title": {
+      "pt-BR": "Amino Master",
+      "en-US": "Amino Master",
+      "es-ES": "Amino Master"
+    },
+    "desc": {
+      "pt-BR": "100% de acerto no Modo Completo!",
+      "en-US": "100% accuracy in Full Mode!",
+      "es-ES": "¡100% de aciertos en el Modo Completo!"
+    }
+  },
+  "codon_speedster": {
+    "icon": "🧬",
+    "title": {
+      "pt-BR": "Codon Speedster",
+      "en-US": "Codon Speedster",
+      "es-ES": "Codon Speedster"
+    },
+    "desc": {
+      "pt-BR": "Venceu todas as fases do Codon Blitz!",
+      "en-US": "Beat all phases in Codon Blitz!",
+      "es-ES": "¡Superaste todas las fases en Codon Blitz!"
+    }
+  },
+  "bookworm": {
+    "icon": "📚",
+    "title": {
+      "pt-BR": "Estudioso",
+      "en-US": "Bookworm",
+      "es-ES": "Ratón de Biblioteca"
+    },
+    "desc": {
+      "pt-BR": "Acessou o Banco de Dados.",
+      "en-US": "Accessed the Database for the first time.",
+      "es-ES": "Accediste a la Base de Datos."
+    }
+  },
+  "ultimate_rush": {
+    "icon": "👑",
+    "title": {
+      "pt-BR": "Amino Rush",
+      "en-US": "Amino Rush",
+      "es-ES": "Amino Rush"
+    },
+    "desc": {
+      "pt-BR": "Desbloqueou todas as conquistas do jogo!",
+      "en-US": "Unlocked all game achievements!",
+      "es-ES": "¡Desbloqueaste todos los logros del juego!"
+    }
+  }
+}

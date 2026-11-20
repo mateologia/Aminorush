@@ -1,0 +1,1683 @@
+[
+  {
+    "id": "gly",
+    "code3": "Gly",
+    "code1": "G",
+    "image": "./images/amino-acids/glicina.webp",
+    "formula": "C2H5NO2",
+    "color": "#64748b",
+    "molarMass": "75,07",
+    "codons": [
+      "GGU",
+      "GGC",
+      "GGA",
+      "GGG"
+    ],
+    "groupKey": "nonpolar",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Glicina",
+      "en-US": "Glycine",
+      "es-ES": "Glicina"
+    },
+    "group": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Alifático, Apolar (Hidrofóbico)",
+      "en-US": "Aliphatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Alifático, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (cadeia lateral mínima — apenas H — com baixíssima interação hidrofóbica)",
+      "en-US": "Nonpolar (minimal side chain — just H — with minimal hydrophobic interaction)",
+      "es-ES": "Apolar (cadena lateral mínima — solo H — con mínima interacción hidrofóbica)"
+    },
+    "essentiality": {
+      "pt-BR": "Condicionalmente essencial (produzido pelo organismo; demanda aumenta em fases de crescimento ou estresse)",
+      "en-US": "Conditionally essential (synthesized by the body; demand rises during growth or stress)",
+      "es-ES": "Condicionalmente esencial (producido por el organismo; su demanda aumenta en crecimiento o estrés)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Menor aminoácido",
+        "en-US": "Smallest amino acid",
+        "es-ES": "Aminoácido más pequeño"
+      },
+      {
+        "pt-BR": "Sem carbono quiral",
+        "en-US": "No chiral carbon",
+        "es-ES": "Sin carbono quiral"
+      }
+    ],
+    "tip": {
+      "pt-BR": "O menor de todos, muito flexível e único sem carbono quiral.",
+      "en-US": "The smallest of all, highly flexible and the only one without a chiral carbon.",
+      "es-ES": "El más pequeño de todos, muy flexible y el único sin carbono quiral."
+    },
+    "sideChain": {
+      "pt-BR": "Apenas um átomo de hidrogênio (-H), tornando o carbono α simétrico (aquiral) e permitindo grande liberdade conformacional na cadeia polipeptídica.",
+      "en-US": "Just a single hydrogen atom (-H), making the α-carbon symmetric (achiral) and granting high conformational freedom to the polypeptide chain.",
+      "es-ES": "Solo un átomo de hidrógeno (-H), lo que hace al carbono α simétrico (aquiral) y otorga gran libertad conformacional a la cadena polipeptídica."
+    },
+    "physicochemical": {
+      "pKa1": "2,34",
+      "pKa2": "9,60",
+      "pKr": null,
+      "pI": "5,97"
+    },
+    "biologicalRole": {
+      "pt-BR": "Abundante no colágeno (a cada terceiro resíduo), atua como neurotransmissor inibitório no sistema nervoso central e é precursor do grupo heme, purinas e glutationa.",
+      "en-US": "Abundant in collagen (every third residue), acts as an inhibitory neurotransmitter in the CNS, and serves as a precursor for heme, purines, and glutathione.",
+      "es-ES": "Abundante en el colágeno (cada tercer residuo), actúa como neurotransmisor inhibidor en el SNC y es precursor del grupo hemo, purinas y glutatión."
+    },
+    "justification": {
+      "pt-BR": "A glicina possui apenas um hidrogênio como cadeia lateral, por isso não tem carbono quiral e confere máxima flexibilidade às proteínas.",
+      "en-US": "Glycine has only a hydrogen atom as its side chain, so it lacks a chiral carbon and gives maximum flexibility to proteins.",
+      "es-ES": "La glicina tiene solo un hidrógeno como cadena lateral, por lo que carece de carbono quiral y otorga máxima flexibilidad a las proteínas."
+    }
+  },
+  {
+    "id": "ala",
+    "code3": "Ala",
+    "code1": "A",
+    "image": "./images/amino-acids/alanina.webp",
+    "formula": "C3H7NO2",
+    "color": "#0284c7",
+    "molarMass": "89,09",
+    "codons": [
+      "GCU",
+      "GCC",
+      "GCA",
+      "GCG"
+    ],
+    "groupKey": "nonpolar",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Alanina",
+      "en-US": "Alanine",
+      "es-ES": "Alanina"
+    },
+    "group": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Alifático, Apolar (Hidrofóbico)",
+      "en-US": "Aliphatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Alifático, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (cadeia lateral metil não polar, pouco reativa em meio aquoso)",
+      "en-US": "Nonpolar (nonpolar methyl side chain, chemically inert in aqueous environments)",
+      "es-ES": "Apolar (cadena lateral metilo no polar, poco reactiva en medio acuoso)"
+    },
+    "essentiality": {
+      "pt-BR": "Não essencial (sintetizado facilmente pelo organismo a partir do piruvato)",
+      "en-US": "Non-essential (easily synthesized by the body from pyruvate)",
+      "es-ES": "No esencial (sintetizado fácilmente por el organismo a partir del piruvato)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Pequena",
+        "en-US": "Small",
+        "es-ES": "Pequeña"
+      },
+      {
+        "pt-BR": "Hidrofóbica",
+        "en-US": "Hydrophobic",
+        "es-ES": "Hidrofóbica"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Cadeia lateral é um simples grupo metil (-CH₃).",
+      "en-US": "Side chain is a simple methyl group (-CH₃).",
+      "es-ES": "La cadena lateral es un simple grupo metilo (-CH₃)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo metil (-CH₃) simples e compacto, que estabiliza estruturas secundárias como α-hélices sem causar impedimento estérico.",
+      "en-US": "A simple, compact methyl group (-CH₃) that stabilizes secondary structures such as α-helices without steric hindrance.",
+      "es-ES": "Grupo metilo (-CH₃) simple y compacto que estabiliza estructuras secundarias como hélices α sin impedimento estérico."
+    },
+    "physicochemical": {
+      "pKa1": "2,34",
+      "pKa2": "9,69",
+      "pKr": null,
+      "pI": "6,00"
+    },
+    "biologicalRole": {
+      "pt-BR": "Peça-chave no ciclo glicose-alanina, transportando nitrogênio dos músculos para o fígado e fornecendo esqueletos de carbono para a gliconeogênese.",
+      "en-US": "Key player in the glucose-alanine cycle, transporting nitrogen from muscles to the liver and supplying carbon skeletons for gluconeogenesis.",
+      "es-ES": "Pieza clave en el ciclo glucosa-alanina, transportando nitrógeno desde los músculos al hígado y aportando esqueletos de carbono para la gluconeogénesis."
+    },
+    "justification": {
+      "pt-BR": "A alanina tem cadeia lateral metil (-CH₃), sendo um aminoácido alifático apolar pequeno e estável em α-hélices.",
+      "en-US": "Alanine carries a methyl (-CH₃) side chain, making it a small nonpolar aliphatic amino acid that favors α-helices.",
+      "es-ES": "La alanina posee una cadena lateral metilo (-CH₃), siendo un aminoácido alifático apolar pequeño y estable en hélices α."
+    }
+  },
+  {
+    "id": "val",
+    "code3": "Val",
+    "code1": "V",
+    "image": "./images/amino-acids/valina.webp",
+    "formula": "C5H11NO2",
+    "color": "#f97316",
+    "molarMass": "117,15",
+    "codons": [
+      "GUU",
+      "GUC",
+      "GUA",
+      "GUG"
+    ],
+    "groupKey": "nonpolar",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Valina",
+      "en-US": "Valine",
+      "es-ES": "Valina"
+    },
+    "group": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Alifático Ramificado, Apolar (Hidrofóbico)",
+      "en-US": "Branched Aliphatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Alifático Ramificado, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (cadeia hidrocarbônica hidrofóbica que evita contato com a água)",
+      "en-US": "Nonpolar (hydrophobic hydrocarbon chain that avoids contact with water)",
+      "es-ES": "Apolar (cadena hidrocarbonada hidrofóbica que evita el contacto con el agua)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Cadeia ramificada",
+        "en-US": "Branched-chain",
+        "es-ES": "Cadena ramificada"
+      },
+      {
+        "pt-BR": "BCAA",
+        "en-US": "BCAA",
+        "es-ES": "BCAA"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Seu nome lembra sua estrutura em V (grupo isopropil).",
+      "en-US": "Its name resembles its V-shaped structure (isopropyl group).",
+      "es-ES": "Su nombre recuerda su estructura en V (grupo isopropilo)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo isopropil (-CH(CH₃)₂) ramificado logo no carbono β, gerando volume próximo ao esqueleto peptídico e favorecendo folhas β.",
+      "en-US": "An isopropyl group (-CH(CH₃)₂) branched right at the β-carbon, adding steric bulk near the backbone and favoring β-sheets.",
+      "es-ES": "Grupo isopropilo (-CH(CH₃)₂) ramificado justo en el carbono β, generando volumen cerca del esqueleto peptídico y favoreciendo láminas β."
+    },
+    "physicochemical": {
+      "pKa1": "2,32",
+      "pKa2": "9,62",
+      "pKr": null,
+      "pI": "5,96"
+    },
+    "biologicalRole": {
+      "pt-BR": "Integra o trio de BCAAs (com leucina e isoleucina), contribuindo para o núcleo hidrofóbico das proteínas e para o metabolismo energético muscular. Sua substituição por glutamato na hemoglobina causa anemia falciforme.",
+      "en-US": "Part of the BCAA trio (with leucine and isoleucine), stabilizing protein hydrophobic cores and supporting muscle energy metabolism. Replacing glutamate with valine in hemoglobin causes sickle cell disease.",
+      "es-ES": "Integra el trío de BCAA (con leucina e isoleucina), estabilizando el núcleo hidrofóbico proteico y apoyando el metabolismo muscular. Su sustitución por glutamato en la hemoglobina causa anemia falciforme."
+    },
+    "justification": {
+      "pt-BR": "A valina é um BCAA apolar cuja cadeia lateral isopropil tem formato em V, favorecendo interações hidrofóbicas no interior das proteínas.",
+      "en-US": "Valine is a nonpolar BCAA with a V-shaped isopropyl side chain that drives hydrophobic interactions inside protein cores.",
+      "es-ES": "La valina es un BCAA apolar cuya cadena lateral isopropilo tiene forma de V, favoreciendo interacciones hidrofóbicas en el interior proteico."
+    }
+  },
+  {
+    "id": "leu",
+    "code3": "Leu",
+    "code1": "L",
+    "image": "./images/amino-acids/leucina.webp",
+    "formula": "C6H13NO2",
+    "color": "#d97706",
+    "molarMass": "131,17",
+    "codons": [
+      "UUA",
+      "UUG",
+      "CUU",
+      "CUC",
+      "CUA",
+      "CUG"
+    ],
+    "groupKey": "nonpolar",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Leucina",
+      "en-US": "Leucine",
+      "es-ES": "Leucina"
+    },
+    "group": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Alifático Ramificado, Apolar (Hidrofóbico)",
+      "en-US": "Branched Aliphatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Alifático Ramificado, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (cadeia lateral fortemente hidrofóbica, típica do núcleo de proteínas globulares)",
+      "en-US": "Nonpolar (strongly hydrophobic side chain, typical of globular protein cores)",
+      "es-ES": "Apolar (cadena lateral fuertemente hidrofóbica, típica del núcleo de proteínas globulares)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Cadeia ramificada",
+        "en-US": "Branched-chain",
+        "es-ES": "Cadena ramificada"
+      },
+      {
+        "pt-BR": "BCAA",
+        "en-US": "BCAA",
+        "es-ES": "BCAA"
+      }
+    ],
+    "tip": {
+      "pt-BR": "BCAA mais abundante nas proteínas musculares.",
+      "en-US": "Most abundant BCAA in muscle proteins.",
+      "es-ES": "El BCAA más abundante en las proteínas musculares."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo isobutil (-CH₂-CH(CH₃)₂), isômero estrutural da isoleucina, com ramificação no carbono γ que acomoda bem α-hélices.",
+      "en-US": "An isobutyl group (-CH₂-CH(CH₃)₂), structural isomer of isoleucine, branched at the γ-carbon which fits well in α-helices.",
+      "es-ES": "Grupo isobutilo (-CH₂-CH(CH₃)₂), isómero estructural de la isoleucina, ramificado en el carbono γ que encaja bien en hélices α."
+    },
+    "physicochemical": {
+      "pKa1": "2,36",
+      "pKa2": "9,60",
+      "pKr": null,
+      "pI": "5,98"
+    },
+    "biologicalRole": {
+      "pt-BR": "Principal ativador da via mTOR para síntese proteica muscular, aminoácido estritamente cetogênico e componente essencial de motivos estruturais como os zíperes de leucina em fatores de transcrição.",
+      "en-US": "Primary activator of the mTOR pathway for muscle protein synthesis, strictly ketogenic, and essential in structural motifs such as leucine zippers in transcription factors.",
+      "es-ES": "Principal activador de la vía mTOR para la síntesis proteica muscular, estrictamente cetogénico y componente esencial de cremalleras de leucina en factores de transcripción."
+    },
+    "justification": {
+      "pt-BR": "A leucina possui cadeia lateral isobutil apolar, é o BCAA mais abundante nos músculos e tem 6 códons no código genético.",
+      "en-US": "Leucine has a nonpolar isobutyl side chain, is the most abundant BCAA in muscle proteins, and is encoded by 6 codons.",
+      "es-ES": "La leucina tiene cadena lateral isobutilo apolar, es el BCAA más abundante en los músculos y está codificada por 6 codones."
+    }
+  },
+  {
+    "id": "ile",
+    "code3": "Ile",
+    "code1": "I",
+    "image": "./images/amino-acids/isoleucina.webp",
+    "formula": "C6H13NO2",
+    "color": "#ea580c",
+    "molarMass": "131,17",
+    "codons": [
+      "AUU",
+      "AUC",
+      "AUA"
+    ],
+    "groupKey": "nonpolar",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Isoleucina",
+      "en-US": "Isoleucine",
+      "es-ES": "Isoleucina"
+    },
+    "group": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Alifático Ramificado, Apolar (Hidrofóbico)",
+      "en-US": "Branched Aliphatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Alifático Ramificado, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (cadeia lateral sec-butil altamente hidrofóbica)",
+      "en-US": "Nonpolar (highly hydrophobic sec-butyl side chain)",
+      "es-ES": "Apolar (cadena lateral sec-butilo altamente hidrofóbica)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Cadeia ramificada",
+        "en-US": "Branched-chain",
+        "es-ES": "Cadena ramificada"
+      },
+      {
+        "pt-BR": "Isômero",
+        "en-US": "Isomer",
+        "es-ES": "Isómero"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Possui dois carbonos quirais (junto com a Treonina).",
+      "en-US": "Has two chiral carbons (alongside Threonine).",
+      "es-ES": "Tiene dos carbonos quirales (junto con la Treonina)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo sec-butil (-CH(CH₃)-CH₂-CH₃), isômero da leucina com um segundo centro quiral no carbono β.",
+      "en-US": "A sec-butyl group (-CH(CH₃)-CH₂-CH₃), isomer of leucine containing a second chiral center at the β-carbon.",
+      "es-ES": "Grupo sec-butilo (-CH(CH₃)-CH₂-CH₃), isómero de la leucina que presenta un segundo centro quiral en el carbono β."
+    },
+    "physicochemical": {
+      "pKa1": "2,36",
+      "pKa2": "9,60",
+      "pKr": null,
+      "pI": "6,02"
+    },
+    "biologicalRole": {
+      "pt-BR": "Estabiliza o empacotamento hidrofóbico em proteínas transmembrana e globulares, além de participar da produção de energia muscular e regulação glicêmica.",
+      "en-US": "Stabilizes hydrophobic packing in globular and transmembrane proteins, while supporting muscle energy production and glucose regulation.",
+      "es-ES": "Estabiliza el empaquetamiento hidrofóbico en proteínas globulares y transmembrana, además de apoyar la energía muscular y la regulación glucémica."
+    },
+    "justification": {
+      "pt-BR": "A isoleucina é isômero da leucina (C₆H₁₃NO₂) com cadeia ramificada sec-butil, o que lhe confere dois carbonos quirais.",
+      "en-US": "Isoleucine is an isomer of leucine (C₆H₁₃NO₂) with a branched sec-butyl side chain, giving it two chiral carbons.",
+      "es-ES": "La isoleucina es isómero de la leucina (C₆H₁₃NO₂) con cadena ramificada sec-butilo, lo que le otorga dos carbonos quirales."
+    }
+  },
+  {
+    "id": "met",
+    "code3": "Met",
+    "code1": "M",
+    "image": "./images/amino-acids/metionina.webp",
+    "formula": "C5H11NO2S",
+    "color": "#ca8a04",
+    "molarMass": "149,21",
+    "codons": [
+      "AUG"
+    ],
+    "groupKey": "nonpolar",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Metionina",
+      "en-US": "Methionine",
+      "es-ES": "Metionina"
+    },
+    "group": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Alifático Sulfurizado, Apolar (Hidrofóbico)",
+      "en-US": "Sulfur-Containing Aliphatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Alifático Azufrado, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (grupo tioéter pouco polar e hidrofóbico, diferente do tiol da cisteína)",
+      "en-US": "Nonpolar (hydrophobic thioether group, unlike cysteine's polar thiol)",
+      "es-ES": "Apolar (grupo tioéter hidrofóbico, a diferencia del tiol polar de la cisteína)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Contém enxofre",
+        "en-US": "Contains sulfur",
+        "es-ES": "Contiene azufre"
+      },
+      {
+        "pt-BR": "Inicia tradução",
+        "en-US": "Starts translation",
+        "es-ES": "Inicia la traducción"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Codificado pelo códon único de início AUG.",
+      "en-US": "Encoded by the unique start codon AUG.",
+      "es-ES": "Codificado por el codón único de inicio AUG."
+    },
+    "sideChain": {
+      "pt-BR": "Cadeia linear contendo um grupo tioéter (-CH₂-CH₂-S-CH₃), sem hidrogênio ionizável no enxofre, o que impede a formação de pontes dissulfeto.",
+      "en-US": "Linear chain containing a thioether group (-CH₂-CH₂-S-CH₃) with no ionizable sulfur hydrogen, preventing disulfide bond formation.",
+      "es-ES": "Cadena lineal con un grupo tioéter (-CH₂-CH₂-S-CH₃), sin hidrógeno ionizable en el azufre, lo que impide formar puentes disulfuro."
+    },
+    "physicochemical": {
+      "pKa1": "2,28",
+      "pKa2": "9,21",
+      "pKr": null,
+      "pI": "5,74"
+    },
+    "biologicalRole": {
+      "pt-BR": "Primeiro aminoácido incorporado na tradução eucariótica (códon AUG) e precursor da S-adenosilmetionina (SAM), o principal doador biológico de grupos metil no DNA e em proteínas.",
+      "en-US": "First amino acid incorporated in eukaryotic translation (AUG codon) and precursor to S-adenosylmethionine (SAM), the main biological methyl donor for DNA and proteins.",
+      "es-ES": "Primer aminoácido incorporado en la traducción eucariota (codón AUG) y precursor de S-adenosilmetionina (SAM), el principal donante biológico de grupos metilo."
+    },
+    "justification": {
+      "pt-BR": "A metionina é codificada pelo códon de início AUG e contém enxofre em um grupo tioéter apolar.",
+      "en-US": "Methionine is encoded by the AUG start codon and contains sulfur within a nonpolar thioether group.",
+      "es-ES": "La metionina está codificada por el codón de inicio AUG y contiene azufre en un grupo tioéter apolar."
+    }
+  },
+  {
+    "id": "pro",
+    "code3": "Pro",
+    "code1": "P",
+    "image": "./images/amino-acids/prolina.webp",
+    "formula": "C5H9NO2",
+    "color": "#e11d48",
+    "molarMass": "115,13",
+    "codons": [
+      "CCU",
+      "CCC",
+      "CCA",
+      "CCG"
+    ],
+    "groupKey": "nonpolar",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Prolina",
+      "en-US": "Proline",
+      "es-ES": "Prolina"
+    },
+    "group": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Cíclico (Iminoácido), Apolar (Hidrofóbico)",
+      "en-US": "Cyclic (Imino Acid), Nonpolar (Hydrophobic)",
+      "es-ES": "Cíclico (Iminoácido), Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (anel pirrolidínico alifático rígido e hidrofóbico)",
+      "en-US": "Nonpolar (rigid, hydrophobic aliphatic pyrrolidine ring)",
+      "es-ES": "Apolar (anillo pirrolidínico alifático rígido e hidrofóbico)"
+    },
+    "essentiality": {
+      "pt-BR": "Condicionalmente essencial (produzido pelo organismo; maior demanda em cicatrização e síntese de colágeno)",
+      "en-US": "Conditionally essential (synthesized by the body; higher demand during wound healing and collagen synthesis)",
+      "es-ES": "Condicionalmente esencial (producido por el organismo; mayor demanda en cicatrización y síntesis de colágeno)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Forma anel",
+        "en-US": "Forms ring",
+        "es-ES": "Forma un anillo"
+      },
+      {
+        "pt-BR": "Quebra hélices alfa",
+        "en-US": "Breaks alpha helices",
+        "es-ES": "Rompe hélices alfa"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Único iminoácido: sua cadeia lateral fecha um anel com o grupo amino.",
+      "en-US": "The only imino acid: its side chain forms a ring with the amino group.",
+      "es-ES": "El único iminoácido: su cadena lateral cierra un anillo con el grupo amino."
+    },
+    "sideChain": {
+      "pt-BR": "Cadeia propil ligada covalentemente ao nitrogênio α-amino, formando um anel pirrolidínico rígido (amina secundária) que restringe a rotação da ligação peptídica.",
+      "en-US": "A propyl chain covalently bonded to the α-amino nitrogen, creating a rigid pyrrolidine ring (secondary amine) that restricts backbone rotation.",
+      "es-ES": "Cadena propilo unida covalentemente al nitrógeno α-amino, formando un anillo pirrolidínico rígido (amina secundaria) que restringe la rotación."
+    },
+    "physicochemical": {
+      "pKa1": "1,99",
+      "pKa2": "10,60",
+      "pKr": null,
+      "pI": "6,30"
+    },
+    "biologicalRole": {
+      "pt-BR": "Induz dobras (voltas β) e interrompe α-hélices por não doar ligação de hidrogênio na amida; sua forma hidroxilada (hidroxiprolina) é vital para a estabilidade do colágeno.",
+      "en-US": "Introduces kinks (β-turns) and disrupts α-helices because its amide lacks an H-bond donor; its hydroxylated form (hydroxyproline) is vital for collagen stability.",
+      "es-ES": "Induce giros β y rompe hélices α por carecer de hidrógeno amídico para puentes de hidrógeno; su forma hidroxilada estabiliza el colágeno."
+    },
+    "justification": {
+      "pt-BR": "A prolina forma um anel pirrolidínico com o próprio grupo α-amino, restringindo a geometria da cadeia e quebrando α-hélices.",
+      "en-US": "Proline forms a rigid pyrrolidine ring with its own α-amino nitrogen, restricting chain geometry and breaking α-helices.",
+      "es-ES": "La prolina forma un anillo pirrolidínico con su propio grupo α-amino, restringiendo la geometría y rompiendo hélices α."
+    }
+  },
+  {
+    "id": "phe",
+    "code3": "Phe",
+    "code1": "F",
+    "image": "./images/amino-acids/fenilalanina.webp",
+    "formula": "C9H11NO2",
+    "color": "#475569",
+    "molarMass": "165,19",
+    "codons": [
+      "UUU",
+      "UUC"
+    ],
+    "groupKey": "aromatic",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Fenilalanina",
+      "en-US": "Phenylalanine",
+      "es-ES": "Fenilalanina"
+    },
+    "group": {
+      "pt-BR": "Aromático",
+      "en-US": "Aromatic",
+      "es-ES": "Aromático"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Aromático, Apolar (Hidrofóbico)",
+      "en-US": "Aromatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Aromático, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (anel benzênico puramente hidrocarbônico, fortemente hidrofóbico)",
+      "en-US": "Nonpolar (pure hydrocarbon benzene ring, strongly hydrophobic)",
+      "es-ES": "Apolar (anillo bencénico puramente hidrocarbonado, fuertemente hidrofóbico)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Anel aromático",
+        "en-US": "Aromatic ring",
+        "es-ES": "Anillo aromático"
+      },
+      {
+        "pt-BR": "Hidrofóbica",
+        "en-US": "Hydrophobic",
+        "es-ES": "Hidrofóbica"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Alanina ligada a um anel benzênico (grupo benzil).",
+      "en-US": "Alanine attached to a benzene ring (benzyl group).",
+      "es-ES": "Alanina unida a un anillo bencénico (grupo bencilo)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo benzil (-CH₂-C₆H₅): anel aromático benzênico planar que realiza interações de empilhamento π (π-stacking) e absorve fracamente luz UV.",
+      "en-US": "Benzyl group (-CH₂-C₆H₅): planar aromatic benzene ring participating in π-stacking interactions and weak UV light absorption.",
+      "es-ES": "Grupo bencilo (-CH₂-C₆H₅): anillo aromático bencénico plano que participa en interacciones π-stacking y absorbe débilmente luz UV."
+    },
+    "physicochemical": {
+      "pKa1": "1,83",
+      "pKa2": "9,13",
+      "pKr": null,
+      "pI": "5,48"
+    },
+    "biologicalRole": {
+      "pt-BR": "Precursor direto da tirosina (via fenilalanina hidroxilase) e, consequentemente, de catecolaminas. O defeito nessa conversão causa a fenilcetonúria (PKU).",
+      "en-US": "Direct precursor of tyrosine (via phenylalanine hydroxylase) and downstream catecholamines. Deficiency in this conversion causes phenylketonuria (PKU).",
+      "es-ES": "Precursor directo de la tirosina (vía fenilalanina hidroxilasa) y de catecolaminas. Su defecto metabólico causa la fenilcetonuria (PKU)."
+    },
+    "justification": {
+      "pt-BR": "A fenilalanina equivale a uma alanina ligada a um anel benzênico apolar, sendo classificada como aromática hidrofóbica.",
+      "en-US": "Phenylalanine is alanine linked to a nonpolar benzene ring, classifying it as a hydrophobic aromatic amino acid.",
+      "es-ES": "La fenilalanina equivale a una alanina unida a un anillo bencénico apolar, clasificándose como aromática hidrofóbica."
+    }
+  },
+  {
+    "id": "trp",
+    "code3": "Trp",
+    "code1": "W",
+    "image": "./images/amino-acids/triptofano.webp",
+    "formula": "C11H12N2O2",
+    "color": "#581c87",
+    "molarMass": "204,23",
+    "codons": [
+      "UGG"
+    ],
+    "groupKey": "aromatic",
+    "polarityKey": "nonpolar",
+    "name": {
+      "pt-BR": "Triptofano",
+      "en-US": "Tryptophan",
+      "es-ES": "Triptófano"
+    },
+    "group": {
+      "pt-BR": "Aromático",
+      "en-US": "Aromatic",
+      "es-ES": "Aromático"
+    },
+    "polarityTag": {
+      "pt-BR": "Apolar",
+      "en-US": "Nonpolar",
+      "es-ES": "Apolar"
+    },
+    "classification": {
+      "pt-BR": "Aromático, Apolar (Hidrofóbico)",
+      "en-US": "Aromatic, Nonpolar (Hydrophobic)",
+      "es-ES": "Aromático, Apolar (Hidrofóbico)"
+    },
+    "polarity": {
+      "pt-BR": "Apolar (cadeia lateral volumosa hidrofóbica, com fraca capacidade de ligação de H no NH indólico)",
+      "en-US": "Nonpolar (bulky hydrophobic side chain, with weak H-bond donor capacity at the indole NH)",
+      "es-ES": "Apolar (cadena lateral voluminosa hidrofóbica, con leve capacidad de enlace de H en el NH indólico)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Maior aromático",
+        "en-US": "Largest aromatic",
+        "es-ES": "Aromático más grande"
+      },
+      {
+        "pt-BR": "Anel indólico",
+        "en-US": "Indole ring",
+        "es-ES": "Anillo indólico"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Precursor da serotonina e melatonina; maior massa molar entre os 20.",
+      "en-US": "Precursor to serotonin and melatonin; largest molar mass among all 20.",
+      "es-ES": "Precursor de la serotonina y la melatonina; mayor masa molar entre los 20."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo indol (anel benzênico fundido a um anel pirrol), conferindo grande volume aromático e forte absorção de luz UV em 280 nm.",
+      "en-US": "Indole group (benzene ring fused to a pyrrole ring), providing large aromatic bulk and strong UV light absorption at 280 nm.",
+      "es-ES": "Grupo indol (anillo bencénico fusionado a un anillo pirrol), que confiere gran volumen aromático y fuerte absorción de luz UV a 280 nm."
+    },
+    "physicochemical": {
+      "pKa1": "2,38",
+      "pKa2": "9,39",
+      "pKr": null,
+      "pI": "5,89"
+    },
+    "biologicalRole": {
+      "pt-BR": "Essencial para síntese proteica e precursor direto da serotonina (neurotransmissor do humor), melatonina (regulação do sono) e niacina (vitamina B3). Principal responsável pela absorbância proteica a 280 nm.",
+      "en-US": "Essential for protein synthesis and direct precursor of serotonin (mood neurotransmitter), melatonin (sleep hormone), and niacin (vitamin B3). Main contributor to protein absorbance at 280 nm.",
+      "es-ES": "Esencial para la síntesis proteica y precursor directo de serotonina, melatonina y niacina (vitamina B3). Principal responsable de la absorbancia proteica a 280 nm."
+    },
+    "justification": {
+      "pt-BR": "O triptofano tem anel indólico aromático (o maior dos 20 aminoácidos), é codificado apenas por UGG e origina serotonina e melatonina.",
+      "en-US": "Tryptophan has an aromatic indole ring (the largest of the 20 amino acids), is coded only by UGG, and yields serotonin and melatonin.",
+      "es-ES": "El triptófano posee un anillo indólico aromático (el mayor de los 20 aminoácidos), tiene solo el codón UGG y origina serotonina y melatonina."
+    }
+  },
+  {
+    "id": "ser",
+    "code3": "Ser",
+    "code1": "S",
+    "image": "./images/amino-acids/serina.webp",
+    "formula": "C3H7NO3",
+    "color": "#0d9488",
+    "molarMass": "105,09",
+    "codons": [
+      "UCU",
+      "UCC",
+      "UCA",
+      "UCG",
+      "AGU",
+      "AGC"
+    ],
+    "groupKey": "polar",
+    "polarityKey": "polar",
+    "name": {
+      "pt-BR": "Serina",
+      "en-US": "Serine",
+      "es-ES": "Serina"
+    },
+    "group": {
+      "pt-BR": "Polar",
+      "en-US": "Polar",
+      "es-ES": "Polar"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar Neutro",
+      "en-US": "Polar Neutral",
+      "es-ES": "Polar Neutro"
+    },
+    "classification": {
+      "pt-BR": "Hidroxilado, Polar Não Carregado",
+      "en-US": "Hydroxylated, Polar Uncharged",
+      "es-ES": "Hidroxilado, Polar No Cargado"
+    },
+    "polarity": {
+      "pt-BR": "Polar neutro (grupo hidroxila -OH forma ligações de hidrogênio com a água; sem carga em pH 7,4)",
+      "en-US": "Polar neutral (hydroxyl -OH forms hydrogen bonds with water; uncharged at pH 7.4)",
+      "es-ES": "Polar neutro (el grupo hidroxilo -OH forma puentes de hidrógeno con el agua; sin carga a pH 7,4)"
+    },
+    "essentiality": {
+      "pt-BR": "Não essencial (sintetizado pelo organismo a partir do 3-fosfoglicerato)",
+      "en-US": "Non-essential (synthesized by the body from 3-phosphoglycerate)",
+      "es-ES": "No esencial (sintetizado por el organismo a partir del 3-fosfoglicerato)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Possui OH",
+        "en-US": "Has OH",
+        "es-ES": "Tiene OH"
+      },
+      {
+        "pt-BR": "Sítio de fosforilação",
+        "en-US": "Phosphorylation site",
+        "es-ES": "Sitio de fosforilación"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Alanina com um grupo hidroxila (-OH).",
+      "en-US": "Alanine with a hydroxyl group (-OH).",
+      "es-ES": "Alanina con un grupo hidroxilo (-OH)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo hidroximetil (-CH₂-OH), um álcool primário altamente polar que atua como nucleófilo em sítios ativos enzimáticos.",
+      "en-US": "Hydroxymethyl group (-CH₂-OH), a polar primary alcohol that acts as a nucleophile in enzyme active sites.",
+      "es-ES": "Grupo hidroximetilo (-CH₂-OH), un alcohol primario polar que actúa como nucleófilo en sitios activos enzimáticos."
+    },
+    "physicochemical": {
+      "pKa1": "2,21",
+      "pKa2": "9,15",
+      "pKr": null,
+      "pI": "5,68"
+    },
+    "biologicalRole": {
+      "pt-BR": "Principal alvo de fosforilação reversível (regulação celular) e O-glicosilação, compõe a tríade catalítica de serina-proteases e participa da síntese de fosfolipídios e esfingolipídios.",
+      "en-US": "Major target for reversible phosphorylation (cell signaling) and O-glycosylation, forms the catalytic triad of serine proteases, and contributes to phospholipid synthesis.",
+      "es-ES": "Principal blanco de fosforilación reversible y O-glicosilación, integra la tríada catalítica de serina-proteasas y participa en la síntesis de fosfolípidos."
+    },
+    "justification": {
+      "pt-BR": "A serina possui uma hidroxila (-OH) polar neutra que forma ligações de hidrogênio e serve de sítio clássico de fosforilação.",
+      "en-US": "Serine carries a polar neutral hydroxyl (-OH) group that forms hydrogen bonds and serves as a major phosphorylation site.",
+      "es-ES": "La serina posee un hidroxilo (-OH) polar neutro que forma puentes de hidrógeno y actúa como sitio clásico de fosforilación."
+    }
+  },
+  {
+    "id": "thr",
+    "code3": "Thr",
+    "code1": "T",
+    "image": "./images/amino-acids/treonina.webp",
+    "formula": "C4H9NO3",
+    "color": "#059669",
+    "molarMass": "119,12",
+    "codons": [
+      "ACU",
+      "ACC",
+      "ACA",
+      "ACG"
+    ],
+    "groupKey": "polar",
+    "polarityKey": "polar",
+    "name": {
+      "pt-BR": "Treonina",
+      "en-US": "Threonine",
+      "es-ES": "Treonina"
+    },
+    "group": {
+      "pt-BR": "Polar",
+      "en-US": "Polar",
+      "es-ES": "Polar"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar Neutro",
+      "en-US": "Polar Neutral",
+      "es-ES": "Polar Neutro"
+    },
+    "classification": {
+      "pt-BR": "Hidroxilado Ramificado, Polar Não Carregado",
+      "en-US": "Branched Hydroxylated, Polar Uncharged",
+      "es-ES": "Hidroxilado Ramificado, Polar No Cargado"
+    },
+    "polarity": {
+      "pt-BR": "Polar neutro (hidroxila secundária interage bem com a água; sem carga em pH fisiológico)",
+      "en-US": "Polar neutral (secondary hydroxyl interacts well with water; uncharged at physiological pH)",
+      "es-ES": "Polar neutro (su hidroxilo secundario interactúa con el agua; sin carga a pH fisiológico)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Possui OH",
+        "en-US": "Has OH",
+        "es-ES": "Tiene OH"
+      },
+      {
+        "pt-BR": "Ramificada",
+        "en-US": "Branched",
+        "es-ES": "Ramificada"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Possui dois carbonos quirais, assim como a Isoleucina.",
+      "en-US": "Has two chiral carbons, just like Isoleucine.",
+      "es-ES": "Tiene dos carbonos quirales, al igual que la Isoleucina."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo 1-hidroxietil (-CH(OH)-CH₃), um álcool secundário ramificado no carbono β que confere um segundo centro quiral à molécula.",
+      "en-US": "A 1-hydroxyethyl group (-CH(OH)-CH₃), a secondary alcohol branched at the β-carbon giving the molecule a second chiral center.",
+      "es-ES": "Grupo 1-hidroxietilo (-CH(OH)-CH₃), un alcohol secundario ramificado en el carbono β que aporta un segundo centro quiral."
+    },
+    "physicochemical": {
+      "pKa1": "2,09",
+      "pKa2": "9,10",
+      "pKr": null,
+      "pI": "5,60"
+    },
+    "biologicalRole": {
+      "pt-BR": "Sítio frequente de fosforilação por quinases (Ser/Thr quinases) e de O-glicosilação em mucinas protetoras do trato gastrointestinal.",
+      "en-US": "Frequent site of phosphorylation by Ser/Thr kinases and O-glycosylation in protective gastrointestinal mucins.",
+      "es-ES": "Sitio frecuente de fosforilación por quinasas Ser/Thr y de O-glicosilación en mucinas protectoras del tracto gastrointestinal."
+    },
+    "justification": {
+      "pt-BR": "A treonina é um aminoácido polar hidroxilado com cadeia ramificada, compartilhando com a isoleucina a presença de dois carbonos quirais.",
+      "en-US": "Threonine is a branched polar hydroxylated amino acid sharing with isoleucine the presence of two chiral carbons.",
+      "es-ES": "La treonina es un aminoácido polar hidroxilado ramificado que comparte con la isoleucina la presencia de dos carbonos quirales."
+    }
+  },
+  {
+    "id": "asn",
+    "code3": "Asn",
+    "code1": "N",
+    "image": "./images/amino-acids/asparagina.webp",
+    "formula": "C4H8N2O3",
+    "color": "#7c3aed",
+    "molarMass": "132,12",
+    "codons": [
+      "AAU",
+      "AAC"
+    ],
+    "groupKey": "polar",
+    "polarityKey": "polar",
+    "name": {
+      "pt-BR": "Asparagina",
+      "en-US": "Asparagine",
+      "es-ES": "Asparagina"
+    },
+    "group": {
+      "pt-BR": "Polar",
+      "en-US": "Polar",
+      "es-ES": "Polar"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar Neutro",
+      "en-US": "Polar Neutral",
+      "es-ES": "Polar Neutro"
+    },
+    "classification": {
+      "pt-BR": "Amida, Polar Não Carregado",
+      "en-US": "Amide, Polar Uncharged",
+      "es-ES": "Amida, Polar No Cargado"
+    },
+    "polarity": {
+      "pt-BR": "Polar neutro (grupo amida forma múltiplas ligações de hidrogênio sem ionizar em pH 7,4)",
+      "en-US": "Polar neutral (amide group forms multiple hydrogen bonds without ionizing at pH 7.4)",
+      "es-ES": "Polar neutro (el grupo amida forma múltiples puentes de hidrógeno sin ionizarse a pH 7,4)"
+    },
+    "essentiality": {
+      "pt-BR": "Não essencial (sintetizado pelo organismo a partir do aspartato pela asparagina sintetase)",
+      "en-US": "Non-essential (synthesized by the body from aspartate via asparagine synthetase)",
+      "es-ES": "No esencial (sintetizado por el organismo a partir del aspartato mediante asparagina sintetasa)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Amida",
+        "en-US": "Amide",
+        "es-ES": "Amida"
+      },
+      {
+        "pt-BR": "Sítio de glicosilação",
+        "en-US": "Glycosylation site",
+        "es-ES": "Sitio de glicosilación"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Derivado amida do ácido aspártico (Aspartato).",
+      "en-US": "Amide derivative of aspartic acid (Aspartate).",
+      "es-ES": "Derivado amida del ácido aspártico (Aspartato)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo carboxamida (-CH₂-CONH₂), que atua simultaneamente como doador e aceptor de ligações de hidrogênio na superfície das proteínas.",
+      "en-US": "Carboxamide group (-CH₂-CONH₂), acting as both a hydrogen-bond donor and acceptor on protein surfaces.",
+      "es-ES": "Grupo carboxamida (-CH₂-CONH₂), que actúa a la vez como donante y aceptor de puentes de hidrógeno en la superficie proteica."
+    },
+    "physicochemical": {
+      "pKa1": "2,02",
+      "pKa2": "8,80",
+      "pKr": null,
+      "pI": "5,41"
+    },
+    "biologicalRole": {
+      "pt-BR": "Sítio clássico de N-glicosilação de glicoproteínas no retículo endoplasmático e alvo terapêutico indireto da enzima asparaginase no tratamento da leucemia linfoblástica aguda.",
+      "en-US": "Classic site of N-linked glycosylation in the endoplasmic reticulum and metabolic target of asparaginase therapy in acute lymphoblastic leukemia.",
+      "es-ES": "Sitio clásico de N-glicosilación en el retículo endoplasmático y blanco metabólico de la terapia con asparaginasa en la leucemia linfoblástica aguda."
+    },
+    "justification": {
+      "pt-BR": "A asparagina é a amida neutra do aspartato e serve como o principal ponto de ancoragem para N-glicosilação em proteínas.",
+      "en-US": "Asparagine is the neutral amide of aspartate and serves as the primary anchor point for N-linked glycosylation in proteins.",
+      "es-ES": "La asparagina es la amida neutra del aspartato y sirve como principal punto de anclaje para la N-glicosilación proteica."
+    }
+  },
+  {
+    "id": "gln",
+    "code3": "Gln",
+    "code1": "Q",
+    "image": "./images/amino-acids/glutamina.webp",
+    "formula": "C5H10N2O3",
+    "color": "#9333ea",
+    "molarMass": "146,14",
+    "codons": [
+      "CAA",
+      "CAG"
+    ],
+    "groupKey": "polar",
+    "polarityKey": "polar",
+    "name": {
+      "pt-BR": "Glutamina",
+      "en-US": "Glutamine",
+      "es-ES": "Glutamina"
+    },
+    "group": {
+      "pt-BR": "Polar",
+      "en-US": "Polar",
+      "es-ES": "Polar"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar Neutro",
+      "en-US": "Polar Neutral",
+      "es-ES": "Polar Neutro"
+    },
+    "classification": {
+      "pt-BR": "Amida, Polar Não Carregado",
+      "en-US": "Amide, Polar Uncharged",
+      "es-ES": "Amida, Polar No Cargado"
+    },
+    "polarity": {
+      "pt-BR": "Polar neutro (amida hidrofílica sem carga líquida em pH 7,4)",
+      "en-US": "Polar neutral (hydrophilic amide with no net charge at pH 7.4)",
+      "es-ES": "Polar neutro (amida hidrofílica sin carga neta a pH 7,4)"
+    },
+    "essentiality": {
+      "pt-BR": "Condicionalmente essencial (produzido pelo organismo; essencial em quadros de estresse catabólico intenso)",
+      "en-US": "Conditionally essential (synthesized by the body; becomes essential during severe catabolic stress)",
+      "es-ES": "Condicionalmente esencial (producido por el organismo; esencial ante estrés catabólico intenso)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Amida maior",
+        "en-US": "Larger amide",
+        "es-ES": "Amida más grande"
+      },
+      {
+        "pt-BR": "Transporta amônia",
+        "en-US": "Transports ammonia",
+        "es-ES": "Transporta amoníaco"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Aminoácido livre mais abundante no sangue; derivado amida do Glutamato.",
+      "en-US": "Most abundant free amino acid in the blood; amide derivative of Glutamate.",
+      "es-ES": "El aminoácido libre más abundante en la sangre; derivado amida del Glutamato."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo carboxamida com um carbono metileno a mais que a asparagina (-CH₂-CH₂-CONH₂), altamente hidrofílico.",
+      "en-US": "Carboxamide group with one extra methylene carbon compared to asparagine (-CH₂-CH₂-CONH₂), strongly hydrophilic.",
+      "es-ES": "Grupo carboxamida con un carbono metileno adicional respecto a la asparagina (-CH₂-CH₂-CONH₂), altamente hidrofílico."
+    },
+    "physicochemical": {
+      "pKa1": "2,17",
+      "pKa2": "9,13",
+      "pKr": null,
+      "pI": "5,65"
+    },
+    "biologicalRole": {
+      "pt-BR": "Principal transportador seguro de nitrogênio/amônia na corrente sanguínea, doador de nitrogênio para síntese de purinas e pirimidinas e fonte energética para enterócitos e células imunes.",
+      "en-US": "Primary safe carrier of nitrogen/ammonia in the bloodstream, nitrogen donor for purine and pyrimidine synthesis, and key fuel for enterocytes and immune cells.",
+      "es-ES": "Principal transportador seguro de nitrógeno/amoníaco en la sangre, donante de nitrógeno para purinas y pirimidinas, y combustible clave para enterocitos y células inmunes."
+    },
+    "justification": {
+      "pt-BR": "A glutamina é a amida polar neutra do glutamato, destacando-se como o aminoácido livre mais abundante no plasma e transportador de amônia.",
+      "en-US": "Glutamine is the polar neutral amide of glutamate, standing out as the most abundant free plasma amino acid and ammonia carrier.",
+      "es-ES": "La glutamina es la amida polar neutra del glutamato, destacando como el aminoácido libre más abundante en el plasma y transportador de amoníaco."
+    }
+  },
+  {
+    "id": "cys",
+    "code3": "Cys",
+    "code1": "C",
+    "image": "./images/amino-acids/cisteina.webp",
+    "formula": "C3H7NO2S",
+    "color": "#eab308",
+    "molarMass": "121,16",
+    "codons": [
+      "UGU",
+      "UGC"
+    ],
+    "groupKey": "polar",
+    "polarityKey": "polar",
+    "name": {
+      "pt-BR": "Cisteína",
+      "en-US": "Cysteine",
+      "es-ES": "Cisteína"
+    },
+    "group": {
+      "pt-BR": "Polar",
+      "en-US": "Polar",
+      "es-ES": "Polar"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar Neutro",
+      "en-US": "Polar Neutral",
+      "es-ES": "Polar Neutro"
+    },
+    "classification": {
+      "pt-BR": "Sulfurizado (Tiol), Polar Não Carregado",
+      "en-US": "Sulfur-Containing (Thiol), Polar Uncharged",
+      "es-ES": "Azufrado (Tiol), Polar No Cargado"
+    },
+    "polarity": {
+      "pt-BR": "Polar neutro (grupo tiol -SH fracamente ácido, reativo e capaz de se oxidar)",
+      "en-US": "Polar neutral (weakly acidic, reactive thiol -SH group capable of oxidation)",
+      "es-ES": "Polar neutro (grupo tiol -SH débilmente ácido, reactivo y capaz de oxidarse)"
+    },
+    "essentiality": {
+      "pt-BR": "Condicionalmente essencial (produzido a partir da metionina e serina; pode ser necessário em recém-nascidos ou hepatopatias)",
+      "en-US": "Conditionally essential (synthesized from methionine and serine; may be required in infants or liver disease)",
+      "es-ES": "Condicionalmente esencial (producido a partir de metionina y serina; puede requerirse en lactantes o hepatopatías)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Grupo SH (tiol)",
+        "en-US": "SH group (thiol)",
+        "es-ES": "Grupo SH (tiol)"
+      },
+      {
+        "pt-BR": "Pontes dissulfeto",
+        "en-US": "Disulfide bonds",
+        "es-ES": "Puentes disulfuro"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Seu grupo tiol (-SH) oxida com outra cisteína para formar ponte dissulfeto (cistina).",
+      "en-US": "Its thiol (-SH) group oxidizes with another cysteine to form a disulfide bond (cystine).",
+      "es-ES": "Su grupo tiol (-SH) se oxida con otra cisteína para formar un puente disulfuro (cistina)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo tiol/sulfidrila (-CH₂-SH) com pK_R ≈ 8,18, altamente nucleofílico e capaz de formar ligações covalentes dissulfeto (-S-S-).",
+      "en-US": "Thiol/sulfhydryl group (-CH₂-SH) with pK_R ≈ 8.18, highly nucleophilic and capable of forming covalent disulfide bonds (-S-S-).",
+      "es-ES": "Grupo tiol/sulfhidrilo (-CH₂-SH) con pK_R ≈ 8,18, altamente nucleofílico y capaz de formar puentes disulfuro covalentes (-S-S-)."
+    },
+    "physicochemical": {
+      "pKa1": "1,96",
+      "pKa2": "10,28",
+      "pKr": "8,18",
+      "pI": "5,07"
+    },
+    "biologicalRole": {
+      "pt-BR": "Estabiliza a estrutura terciária e quaternária de proteínas secretadas (como insulina e anticorpos) por pontes dissulfeto e é o resíduo antioxidante ativo da glutationa.",
+      "en-US": "Stabilizes tertiary and quaternary structures of secreted proteins (like insulin and antibodies) via disulfide bonds, and is the active antioxidant residue in glutathione.",
+      "es-ES": "Estabiliza la estructura terciaria y cuaternaria de proteínas secretadas (insulina, anticuerpos) mediante puentes disulfuro y es el residuo antioxidante activo del glutatión."
+    },
+    "justification": {
+      "pt-BR": "A cisteína possui o grupo sulfidrila (-SH), permitindo formar pontes dissulfeto (-S-S-) covalentes essenciais para o enovelamento proteico.",
+      "en-US": "Cysteine contains a sulfhydryl (-SH) group, enabling covalent disulfide (-S-S-) bonds essential for protein folding.",
+      "es-ES": "La cisteína posee un grupo sulfhidrilo (-SH), permitiendo formar puentes disulfuro (-S-S-) covalentes esenciales para el plegamiento proteico."
+    }
+  },
+  {
+    "id": "tyr",
+    "code3": "Tyr",
+    "code1": "Y",
+    "image": "./images/amino-acids/tirosina.webp",
+    "formula": "C9H11NO3",
+    "color": "#15803d",
+    "molarMass": "181,19",
+    "codons": [
+      "UAU",
+      "UAC"
+    ],
+    "groupKey": "aromatic",
+    "polarityKey": "polar",
+    "name": {
+      "pt-BR": "Tirosina",
+      "en-US": "Tyrosine",
+      "es-ES": "Tirosina"
+    },
+    "group": {
+      "pt-BR": "Aromático",
+      "en-US": "Aromatic",
+      "es-ES": "Aromático"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar Neutro",
+      "en-US": "Polar Neutral",
+      "es-ES": "Polar Neutro"
+    },
+    "classification": {
+      "pt-BR": "Aromático Hidroxilado, Polar Não Carregado",
+      "en-US": "Hydroxylated Aromatic, Polar Uncharged",
+      "es-ES": "Aromático Hidroxilado, Polar No Cargado"
+    },
+    "polarity": {
+      "pt-BR": "Polar neutro (grupo fenol -OH permite ligações de hidrogênio, tornando-a mais polar que a fenilalanina)",
+      "en-US": "Polar neutral (phenol -OH allows hydrogen bonding, making it more polar than phenylalanine)",
+      "es-ES": "Polar neutro (el grupo fenol -OH permite puentes de hidrógeno, haciéndola más polar que la fenilalanina)"
+    },
+    "essentiality": {
+      "pt-BR": "Condicionalmente essencial (produzido a partir da fenilalanina; torna-se essencial na fenilcetonúria)",
+      "en-US": "Conditionally essential (synthesized from phenylalanine; becomes essential in phenylketonuria)",
+      "es-ES": "Condicionalmente esencial (producido a partir de fenilalanina; se vuelve esencial en la fenilcetonuria)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Aromático + OH",
+        "en-US": "Aromatic + OH",
+        "es-ES": "Aromático + OH"
+      },
+      {
+        "pt-BR": "Sítio de fosforilação",
+        "en-US": "Phosphorylation site",
+        "es-ES": "Sitio de fosforilación"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Precursor da dopamina, adrenalina, melanina e hormônios da tireoide.",
+      "en-US": "Precursor to dopamine, adrenaline, melanin, and thyroid hormones.",
+      "es-ES": "Precursor de dopamina, adrenalina, melanina y hormonas tiroideas."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo para-hidroxibenzil (anel fenólico com pK_R ≈ 10,07), que absorve luz UV e participa de ligações de hidrogênio e fosforilação.",
+      "en-US": "Para-hydroxybenzyl group (phenolic ring with pK_R ≈ 10.07), absorbing UV light and participating in hydrogen bonding and phosphorylation.",
+      "es-ES": "Grupo para-hidroxibencilo (anillo fenólico con pK_R ≈ 10,07), que absorbe luz UV y participa en enlaces de hidrógeno y fosforilación."
+    },
+    "physicochemical": {
+      "pKa1": "2,20",
+      "pKa2": "9,11",
+      "pKr": "10,07",
+      "pI": "5,66"
+    },
+    "biologicalRole": {
+      "pt-BR": "Precursor de catecolaminas (dopamina, noradrenalina, adrenalina), melanina e hormônios tireoidianos (T3/T4), além de ser alvo-chave de receptores tirosina-quinase na sinalização celular.",
+      "en-US": "Precursor of catecholamines (dopamine, norepinephrine, epinephrine), melanin, and thyroid hormones (T3/T4), and a key phosphorylation target for receptor tyrosine kinases.",
+      "es-ES": "Precursor de catecolaminas (dopamina, noradrenalina, adrenalina), melanina y hormonas tiroideas (T3/T4), además de blanco clave de receptores tirosina-quinasa."
+    },
+    "justification": {
+      "pt-BR": "A tirosina combina um anel aromático com um grupo hidroxila fenólico, sendo aromática e polar, além de originar dopamina, adrenalina e melanina.",
+      "en-US": "Tyrosine combines an aromatic ring with a phenolic hydroxyl group, making it aromatic and polar, and the precursor to dopamine, adrenaline, and melanin.",
+      "es-ES": "La tirosina combina un anillo aromático con un hidroxilo fenólico, siendo aromática y polar, y precursora de dopamina, adrenalina y melanina."
+    }
+  },
+  {
+    "id": "asp",
+    "code3": "Asp",
+    "code1": "D",
+    "image": "./images/amino-acids/acido_aspartato.webp",
+    "formula": "C4H7NO4",
+    "color": "#c026d3",
+    "molarMass": "133,10",
+    "codons": [
+      "GAU",
+      "GAC"
+    ],
+    "groupKey": "acidic",
+    "polarityKey": "negative",
+    "name": {
+      "pt-BR": "Aspartato",
+      "en-US": "Aspartate",
+      "es-ES": "Aspartato"
+    },
+    "group": {
+      "pt-BR": "Ácido",
+      "en-US": "Acidic",
+      "es-ES": "Ácido"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar (−)",
+      "en-US": "Polar (−)",
+      "es-ES": "Polar (−)"
+    },
+    "classification": {
+      "pt-BR": "Ácido, Polar com Carga Negativa (pH 7,4)",
+      "en-US": "Acidic, Polar Negatively Charged (pH 7.4)",
+      "es-ES": "Ácido, Polar con Carga Negativa (pH 7,4)"
+    },
+    "polarity": {
+      "pt-BR": "Polar carregado negativamente (carboxila desprotonada -COO⁻ em pH fisiológico; altamente hidrofílico)",
+      "en-US": "Polar negatively charged (deprotonated carboxyl -COO⁻ at physiological pH; strongly hydrophilic)",
+      "es-ES": "Polar cargado negativamente (carboxilo desprotonado -COO⁻ a pH fisiológico; muy hidrofílico)"
+    },
+    "essentiality": {
+      "pt-BR": "Não essencial (sintetizado pelo organismo por transaminação do oxaloacetato)",
+      "en-US": "Non-essential (synthesized by the body via transamination of oxaloacetate)",
+      "es-ES": "No esencial (sintetizado por el organismo por transaminación del oxalacetato)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Carga negativa",
+        "en-US": "Negative charge",
+        "es-ES": "Carga negativa"
+      },
+      {
+        "pt-BR": "Ácido dicarboxílico",
+        "en-US": "Dicarboxylic acid",
+        "es-ES": "Ácido dicarboxílico"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Doador de nitrogênio no ciclo da ureia e na síntese de nucleotídeos.",
+      "en-US": "Nitrogen donor in the urea cycle and nucleotide synthesis.",
+      "es-ES": "Donante de nitrógeno en el ciclo de la urea y síntesis de nucleótidos."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo β-carboxila (-CH₂-COO⁻) com pK_R ≈ 3,65, mantendo carga negativa em pH fisiológico e formando pontes salinas com resíduos básicos.",
+      "en-US": "β-carboxyl group (-CH₂-COO⁻) with pK_R ≈ 3.65, carrying a negative charge at physiological pH and forming salt bridges with basic residues.",
+      "es-ES": "Grupo β-carboxilo (-CH₂-COO⁻) con pK_R ≈ 3,65, con carga negativa a pH fisiológico y capaz de formar puentes salinos con residuos básicos."
+    },
+    "physicochemical": {
+      "pKa1": "1,88",
+      "pKa2": "9,60",
+      "pKr": "3,65",
+      "pI": "2,77"
+    },
+    "biologicalRole": {
+      "pt-BR": "Fornece um dos átomos de nitrogênio no ciclo da ureia, participa da lançadeira malato-aspartato e integra sítios catalíticos de enzimas (como proteases aspárticas).",
+      "en-US": "Supplies a nitrogen atom in the urea cycle, participates in the malate-aspartate shuttle, and is part of enzyme active sites (such as aspartic proteases).",
+      "es-ES": "Aporta nitrógeno en el ciclo de la urea, participa en la lanzadera malato-aspartato e integra sitios catalíticos de enzimas como las proteasas aspárticas."
+    },
+    "justification": {
+      "pt-BR": "O aspartato possui um segundo grupo carboxila (pK_R = 3,65) desprotonado em pH 7,4, conferindo caráter ácido e carga negativa.",
+      "en-US": "Aspartate carries a second carboxyl group (pK_R = 3.65) deprotonated at pH 7.4, giving it acidic character and a negative charge.",
+      "es-ES": "El aspartato posee un segundo grupo carboxilo (pK_R = 3,65) desprotonado a pH 7,4, lo que le confiere carácter ácido y carga negativa."
+    }
+  },
+  {
+    "id": "glu",
+    "code3": "Glu",
+    "code1": "E",
+    "image": "./images/amino-acids/acido_glutamato.webp",
+    "formula": "C5H9NO4",
+    "color": "#db2777",
+    "molarMass": "147,13",
+    "codons": [
+      "GAA",
+      "GAG"
+    ],
+    "groupKey": "acidic",
+    "polarityKey": "negative",
+    "name": {
+      "pt-BR": "Glutamato",
+      "en-US": "Glutamate",
+      "es-ES": "Glutamato"
+    },
+    "group": {
+      "pt-BR": "Ácido",
+      "en-US": "Acidic",
+      "es-ES": "Ácido"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar (−)",
+      "en-US": "Polar (−)",
+      "es-ES": "Polar (−)"
+    },
+    "classification": {
+      "pt-BR": "Ácido, Polar com Carga Negativa (pH 7,4)",
+      "en-US": "Acidic, Polar Negatively Charged (pH 7.4)",
+      "es-ES": "Ácido, Polar con Carga Negativa (pH 7,4)"
+    },
+    "polarity": {
+      "pt-BR": "Polar carregado negativamente (γ-carboxilato -COO⁻ em pH fisiológico; muito solúvel em água)",
+      "en-US": "Polar negatively charged (γ-carboxylate -COO⁻ at physiological pH; highly water-soluble)",
+      "es-ES": "Polar cargado negativamente (γ-carboxilato -COO⁻ a pH fisiológico; muy soluble en agua)"
+    },
+    "essentiality": {
+      "pt-BR": "Não essencial (sintetizado pelo organismo a partir do α-cetoglutarato do ciclo de Krebs)",
+      "en-US": "Non-essential (synthesized by the body from α-ketoglutarate in the Krebs cycle)",
+      "es-ES": "No esencial (sintetizado por el organismo a partir del α-cetoglutarato del ciclo de Krebs)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Carga negativa",
+        "en-US": "Negative charge",
+        "es-ES": "Carga negativa"
+      },
+      {
+        "pt-BR": "Neurotransmissor",
+        "en-US": "Neurotransmitter",
+        "es-ES": "Neurotransmisor"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Principal neurotransmissor excitatório do cérebro (e precursor do GABA).",
+      "en-US": "Main excitatory neurotransmitter in the brain (and precursor to GABA).",
+      "es-ES": "Principal neurotransmisor excitatorio del cerebro (y precursor del GABA)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo γ-carboxila (-CH₂-CH₂-COO⁻) com pK_R ≈ 4,25, um carbono mais longo que o aspartato, carregado negativamente em pH fisiológico.",
+      "en-US": "γ-carboxyl group (-CH₂-CH₂-COO⁻) with pK_R ≈ 4.25, one carbon longer than aspartate and negatively charged at physiological pH.",
+      "es-ES": "Grupo γ-carboxilo (-CH₂-CH₂-COO⁻) con pK_R ≈ 4,25, un carbono más largo que el aspartato y cargado negativamente a pH fisiológico."
+    },
+    "physicochemical": {
+      "pKa1": "2,19",
+      "pKa2": "9,67",
+      "pKr": "4,25",
+      "pI": "3,22"
+    },
+    "biologicalRole": {
+      "pt-BR": "Principal neurotransmissor excitatório do SNC, precursor do neurotransmissor inibitório GABA e eixo central das reações de transaminação no metabolismo de aminoácidos.",
+      "en-US": "Main excitatory neurotransmitter of the CNS, precursor to the inhibitory neurotransmitter GABA, and central hub for transamination in amino acid metabolism.",
+      "es-ES": "Principal neurotransmisor excitatorio del SNC, precursor del neurotransmisor inhibidor GABA y eje central de las transaminaciones metabólicas."
+    },
+    "justification": {
+      "pt-BR": "O glutamato possui cadeia lateral carboxílica (pK_R = 4,25) carregada negativamente em pH 7,4 e atua como principal neurotransmissor excitatório cerebral.",
+      "en-US": "Glutamate carries a carboxyl side chain (pK_R = 4.25) negatively charged at pH 7.4 and serves as the brain's main excitatory neurotransmitter.",
+      "es-ES": "El glutamato posee cadena lateral carboxílica (pK_R = 4,25) negativa a pH 7,4 y actúa como el principal neurotransmisor excitatorio cerebral."
+    }
+  },
+  {
+    "id": "lys",
+    "code3": "Lys",
+    "code1": "K",
+    "image": "./images/amino-acids/lisina.webp",
+    "formula": "C6H14N2O2",
+    "color": "#3b82f6",
+    "molarMass": "146,19",
+    "codons": [
+      "AAA",
+      "AAG"
+    ],
+    "groupKey": "basic",
+    "polarityKey": "positive",
+    "name": {
+      "pt-BR": "Lisina",
+      "en-US": "Lysine",
+      "es-ES": "Lisina"
+    },
+    "group": {
+      "pt-BR": "Básico",
+      "en-US": "Basic",
+      "es-ES": "Básico"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar (+)",
+      "en-US": "Polar (+)",
+      "es-ES": "Polar (+)"
+    },
+    "classification": {
+      "pt-BR": "Básico, Polar com Carga Positiva (pH 7,4)",
+      "en-US": "Basic, Polar Positively Charged (pH 7.4)",
+      "es-ES": "Básico, Polar con Carga Positiva (pH 7,4)"
+    },
+    "polarity": {
+      "pt-BR": "Polar carregado positivamente (grupo ε-amino protonado -NH₃⁺ em pH fisiológico; fortemente hidrofílico)",
+      "en-US": "Polar positively charged (protonated ε-amino group -NH₃⁺ at physiological pH; strongly hydrophilic)",
+      "es-ES": "Polar cargado positivamente (grupo ε-amino protonado -NH₃⁺ a pH fisiológico; muy hidrofílico)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido pelo corpo; deve ser obtido pela dieta)",
+      "en-US": "Essential (not synthesized by the body; must be obtained through diet)",
+      "es-ES": "Esencial (no es producido por el cuerpo; debe obtenerse por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Carga positiva",
+        "en-US": "Positive charge",
+        "es-ES": "Carga positiva"
+      },
+      {
+        "pt-BR": "Amino extra",
+        "en-US": "Extra amino",
+        "es-ES": "Amino extra"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Cadeia lateral longa terminada em um grupo épsilon-amino (-NH₃⁺).",
+      "en-US": "Long side chain ending in an epsilon-amino group (-NH₃⁺).",
+      "es-ES": "Cadena lateral larga terminada en un grupo épsilon-amino (-NH₃⁺)."
+    },
+    "sideChain": {
+      "pt-BR": "Cadeia butil-amina (-(CH₂)₄-NH₃⁺) com pK_R ≈ 10,53, permanecendo protonada com carga +1 em pH fisiológico.",
+      "en-US": "Butyl-amine chain (-(CH₂)₄-NH₃⁺) with pK_R ≈ 10.53, remaining protonated with a +1 charge at physiological pH.",
+      "es-ES": "Cadena butil-amina (-(CH₂)₄-NH₃⁺) con pK_R ≈ 10,53, permaneciendo protonada con carga +1 a pH fisiológico."
+    },
+    "physicochemical": {
+      "pKa1": "2,18",
+      "pKa2": "8,95",
+      "pKr": "10,53",
+      "pI": "9,74"
+    },
+    "biologicalRole": {
+      "pt-BR": "Abundante em histonas (onde interage com o DNA negativo e sofre acetilação/metilação epigenética), forma ligações cruzadas no colágeno e é alvo da ubiquitinação proteica.",
+      "en-US": "Abundant in histones (binding negatively charged DNA and undergoing epigenetic acetylation/methylation), forms collagen cross-links, and is the target of ubiquitination.",
+      "es-ES": "Abundante en histonas (donde interactúa con el ADN y sufre acetilación/metilación epigenética), forma enlaces cruzados en el colágeno y es blanco de ubiquitinación."
+    },
+    "justification": {
+      "pt-BR": "A lisina tem um grupo ε-amino extra (pK_R = 10,53) que fica protonado em pH 7,4, conferindo caráter básico e carga positiva.",
+      "en-US": "Lysine carries an extra ε-amino group (pK_R = 10.53) that stays protonated at pH 7.4, giving it basic character and positive charge.",
+      "es-ES": "La lisina tiene un grupo ε-amino extra (pK_R = 10,53) protonado a pH 7,4, lo que le otorga carácter básico y carga positiva."
+    }
+  },
+  {
+    "id": "arg",
+    "code3": "Arg",
+    "code1": "R",
+    "image": "./images/amino-acids/arginina.webp",
+    "formula": "C6H14N4O2",
+    "color": "#4f46e5",
+    "molarMass": "174,20",
+    "codons": [
+      "CGU",
+      "CGC",
+      "CGA",
+      "CGG",
+      "AGA",
+      "AGG"
+    ],
+    "groupKey": "basic",
+    "polarityKey": "positive",
+    "name": {
+      "pt-BR": "Arginina",
+      "en-US": "Arginine",
+      "es-ES": "Arginina"
+    },
+    "group": {
+      "pt-BR": "Básico",
+      "en-US": "Basic",
+      "es-ES": "Básico"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar (+)",
+      "en-US": "Polar (+)",
+      "es-ES": "Polar (+)"
+    },
+    "classification": {
+      "pt-BR": "Básico, Polar com Carga Positiva (pH 7,4)",
+      "en-US": "Basic, Polar Positively Charged (pH 7.4)",
+      "es-ES": "Básico, Polar con Carga Positiva (pH 7,4)"
+    },
+    "polarity": {
+      "pt-BR": "Polar carregado positivamente (grupo guanidino sempre protonado em pH fisiológico; o mais básico dos 20)",
+      "en-US": "Polar positively charged (guanidino group permanently protonated at physiological pH; the most basic of all 20)",
+      "es-ES": "Polar cargado positivamente (grupo guanidino siempre protonado a pH fisiológico; el más básico de los 20)"
+    },
+    "essentiality": {
+      "pt-BR": "Condicionalmente essencial (produzido no ciclo da ureia; essencial em crianças em crescimento e situações de trauma)",
+      "en-US": "Conditionally essential (synthesized in the urea cycle; essential in growing children and during trauma recovery)",
+      "es-ES": "Condicionalmente esencial (producido en el ciclo de la urea; esencial en niños en crecimiento y recuperación de traumas)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Carga positiva",
+        "en-US": "Positive charge",
+        "es-ES": "Carga positiva"
+      },
+      {
+        "pt-BR": "Grupo guanidino",
+        "en-US": "Guanidino group",
+        "es-ES": "Grupo guanidino"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Aminoácido mais básico (pK_R ≈ 12,48) e precursor do óxido nítrico (NO).",
+      "en-US": "Most basic amino acid (pK_R ≈ 12.48) and precursor to nitric oxide (NO).",
+      "es-ES": "El aminoácido más básico (pK_R ≈ 12,48) y precursor del óxido nítrico (NO)."
+    },
+    "sideChain": {
+      "pt-BR": "Grupo guanidino (-(CH₂)₃-NH-C(=NH₂⁺)-NH₂) estabilizado por ressonância com pK_R ≈ 12,48, capaz de formar múltiplas pontes salinas e ligações de hidrogênio.",
+      "en-US": "Resonance-stabilized guanidino group (-(CH₂)₃-NH-C(=NH₂⁺)-NH₂) with pK_R ≈ 12.48, forming strong salt bridges and multiple hydrogen bonds.",
+      "es-ES": "Grupo guanidino estabilizado por resonancia con pK_R ≈ 12,48, capaz de formar fuertes puentes salinos y múltiples enlaces de hidrógeno."
+    },
+    "physicochemical": {
+      "pKa1": "2,17",
+      "pKa2": "9,04",
+      "pKr": "12,48",
+      "pI": "10,76"
+    },
+    "biologicalRole": {
+      "pt-BR": "Intermediário central do ciclo da ureia, precursor do óxido nítrico (vasodilatador) e da creatina, e essencial na interação de proteínas com ácidos nucleicos (DNA/RNA).",
+      "en-US": "Central intermediate in the urea cycle, precursor to nitric oxide (vasodilator) and creatine, and vital for protein binding to nucleic acids (DNA/RNA).",
+      "es-ES": "Intermediario central del ciclo de la urea, precursor del óxido nítrico (vasodilatador) y la creatina, y clave para la unión de proteínas a ácidos nucleicos."
+    },
+    "justification": {
+      "pt-BR": "A arginina contém o grupo guanidino (pK_R = 12,48), sendo o aminoácido mais básico, sempre positivo em pH fisiológico e precursor do óxido nítrico.",
+      "en-US": "Arginine contains the guanidino group (pK_R = 12.48), making it the most basic amino acid, always positive at physiological pH, and precursor to nitric oxide.",
+      "es-ES": "La arginina contiene el grupo guanidino (pK_R = 12,48), siendo el aminoácido más básico, siempre positivo a pH fisiológico y precursor del óxido nítrico."
+    }
+  },
+  {
+    "id": "his",
+    "code3": "His",
+    "code1": "H",
+    "image": "./images/amino-acids/histidina.webp",
+    "formula": "C6H9N3O2",
+    "color": "#2563eb",
+    "molarMass": "155,15",
+    "codons": [
+      "CAU",
+      "CAC"
+    ],
+    "groupKey": "basic",
+    "polarityKey": "positive",
+    "name": {
+      "pt-BR": "Histidina",
+      "en-US": "Histidine",
+      "es-ES": "Histidina"
+    },
+    "group": {
+      "pt-BR": "Básico",
+      "en-US": "Basic",
+      "es-ES": "Básico"
+    },
+    "polarityTag": {
+      "pt-BR": "Polar (+/0)",
+      "en-US": "Polar (+/0)",
+      "es-ES": "Polar (+/0)"
+    },
+    "classification": {
+      "pt-BR": "Básico (Imidazol), Polar Parcialmente Positivo (pH 7,4)",
+      "en-US": "Basic (Imidazole), Polar Partially Positive (pH 7.4)",
+      "es-ES": "Básico (Imidazol), Polar Parcialmente Positivo (pH 7,4)"
+    },
+    "polarity": {
+      "pt-BR": "Polar (anel imidazol com pK_R ≈ 6,0 permite alternar entre forma neutra e positiva em pH fisiológico)",
+      "en-US": "Polar (imidazole ring with pK_R ≈ 6.0 allows switching between neutral and positive forms at physiological pH)",
+      "es-ES": "Polar (el anillo imidazol con pK_R ≈ 6,0 permite alternar entre forma neutra y positiva a pH fisiológico)"
+    },
+    "essentiality": {
+      "pt-BR": "Essencial (não é produzido em quantidade suficiente pelo corpo; obtido pela dieta)",
+      "en-US": "Essential (not synthesized in sufficient amounts by the body; obtained through diet)",
+      "es-ES": "Esencial (no es producido en cantidad suficiente por el cuerpo; obtenido por la dieta)"
+    },
+    "properties": [
+      {
+        "pt-BR": "Tampão fisiológico",
+        "en-US": "Physiological buffer",
+        "es-ES": "Tampón fisiológico"
+      },
+      {
+        "pt-BR": "Anel imidazol",
+        "en-US": "Imidazole ring",
+        "es-ES": "Anillo imidazol"
+      }
+    ],
+    "tip": {
+      "pt-BR": "Único aminoácido com pK_R próximo ao pH fisiológico (~6,0), atuando como tampão.",
+      "en-US": "Only amino acid with pK_R near physiological pH (~6.0), acting as a buffer.",
+      "es-ES": "Único aminoácido con pK_R cercano al pH fisiológico (~6,0), actuando como tampón."
+    },
+    "sideChain": {
+      "pt-BR": "Anel heterocíclico aromático imidazol (pK_R ≈ 6,00), capaz de doar e aceitar prótons com facilidade próximo à neutralidade.",
+      "en-US": "Aromatic heterocyclic imidazole ring (pK_R ≈ 6.00), readily donating and accepting protons near neutral pH.",
+      "es-ES": "Anillo heterocíclico aromático imidazol (pK_R ≈ 6,00), capaz de donar y aceptar protones fácilmente cerca de la neutralidad."
+    },
+    "physicochemical": {
+      "pKa1": "1,82",
+      "pKa2": "9,17",
+      "pKr": "6,00",
+      "pI": "7,59"
+    },
+    "biologicalRole": {
+      "pt-BR": "Atua na catálise ácido-base de inúmeras enzimas, coordena o ferro do grupo heme na hemoglobina/mioglobina e é precursor direto da histamina na resposta imune e gástrica.",
+      "en-US": "Drives acid-base catalysis in many enzymes, coordinates heme iron in hemoglobin/myoglobin, and is the direct precursor of histamine in immune and gastric responses.",
+      "es-ES": "Participa en la catálisis ácido-base de múltiples enzimas, coordina el hierro del grupo hemo en hemoglobina/mioglobina y es precursor de la histamina."
+    },
+    "justification": {
+      "pt-BR": "A histidina possui anel imidazol com pK_R ≈ 6,0, permitindo atuar como tampão fisiológico e alternar entre estado neutro e positivo em catálise enzimática.",
+      "en-US": "Histidine has an imidazole ring with pK_R ≈ 6.0, enabling it to act as a physiological buffer and switch between neutral and positive states in enzyme catalysis.",
+      "es-ES": "La histidina posee un anillo imidazol con pK_R ≈ 6,0, actuando como tampón fisiológico y alternando entre estado neutro y positivo en catálisis enzimática."
+    }
+  }
+]
