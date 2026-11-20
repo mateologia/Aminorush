@@ -1,0 +1,137 @@
+/* ==========================================================================
+   AminoRush — Keyframes e Estados Animados
+   ========================================================================== */
+
+@keyframes patternMove {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(60px, 60px, 0);
+    }
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-8px);
+    }
+    75% {
+        transform: translateX(8px);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes comboFlash {
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -80px, 0) scale(1.5);
+    }
+}
+
+@keyframes dangerShake {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    20% {
+        transform: translate3d(-2px, 2px, 0);
+    }
+    40% {
+        transform: translate3d(2px, -2px, 0);
+    }
+    60% {
+        transform: translate3d(-2px, -2px, 0);
+    }
+    80% {
+        transform: translate3d(2px, 2px, 0);
+    }
+}
+
+@keyframes radarPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px var(--orange);
+        border-color: var(--orange);
+    }
+    50% {
+        box-shadow: 0 0 30px var(--orange);
+        border-color: #F59E0B;
+        background: rgba(245, 158, 11, 0.2);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutRight {
+    to {
+        opacity: 0;
+        transform: translateX(120%);
+    }
+}
+
+/* Estados utilitários animados */
+.danger-mode {
+    animation: dangerShake 0.4s infinite !important;
+    border: 2px solid rgba(255, 107, 107, 0.5) !important;
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.4) !important;
+}
+
+.radar-glow {
+    animation: radarPulse 1s infinite !important;
+    border-color: var(--orange) !important;
+    color: var(--orange) !important;
+    z-index: 10;
+}

@@ -1,0 +1,188 @@
+/* ==========================================================================
+   AminoRush — Responsividade e Preferências de Acessibilidade
+   ========================================================================== */
+
+@media (max-width: 540px) {
+    body {
+        padding: 72px 14px 20px;
+    }
+
+    .global-controls {
+        top: -56px;
+        gap: 6px;
+        padding: 6px 10px;
+    }
+
+    .lang-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 24px 16px;
+    }
+
+    .card h1 {
+        font-size: 2.2rem;
+    }
+
+    .top-bar {
+        gap: 6px;
+    }
+
+    .stat-pill {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .question-text {
+        font-size: 1.15rem;
+    }
+
+    .btn-grid {
+        gap: 10px;
+    }
+
+    .btn-grid .btn {
+        padding: 14px 10px;
+        font-size: 0.95rem;
+    }
+
+    .arcade-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    .arcade-grid .btn {
+        padding: 10px 6px;
+        font-size: 0.82rem;
+    }
+
+    .toast-container {
+        top: 12px;
+        right: 12px;
+        left: 12px;
+    }
+
+    .toast {
+        padding: 12px 16px;
+    }
+
+    .feedback-text {
+        font-size: 4rem;
+    }
+
+    .feedback-text.timeout {
+        font-size: 1.5rem;
+        padding: 14px 24px;
+    }
+}
+
+@media (max-width: 380px) {
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arcade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .study-card .aa-name {
+        font-size: 1.85rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bg-pattern,
+    .under-construction,
+    .structure-placeholder,
+    .timer-frozen,
+    .freeze-active {
+        animation: none !important;
+    }
+}
+
+/* Responsividade do Banco de Dados */
+@media (max-width: 1120px) {
+    .db-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .db-workspace.has-panel .db-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .db-detail-columns {
+        grid-template-columns: 240px minmax(0, 1fr);
+    }
+
+    .db-detail-col-extra {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 900px) {
+    .db-topbar {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+        padding-top: 52px;
+        text-align: center;
+    }
+
+    .db-topbar-left {
+        justify-content: center;
+    }
+
+    .db-topbar-spacer {
+        display: none;
+    }
+
+    .db-workspace.has-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .db-side-panel {
+        position: static;
+        order: -1;
+    }
+
+    .db-grid,
+    .db-workspace.has-panel .db-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .db-detail-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .db-toolbar {
+        padding: 12px;
+    }
+
+    .db-search-box {
+        max-width: none;
+        flex-basis: 100%;
+    }
+
+    .db-grid,
+    .db-workspace.has-panel .db-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .db-detail-card {
+        padding: 20px 16px;
+    }
+
+    .db-zoom-image-wrap {
+        height: 260px;
+    }
+}
