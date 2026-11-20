@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AminoRush - Ultimate Edition</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Folhas de Estilo (Bloco 2) -->
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/codon-blitz.css">
+    <link rel="stylesheet" href="./css/database.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-- Filtro SVG para transparência das estruturas químicas no tema escuro -->
+    <svg width="0" height="0" class="svg-filters" aria-hidden="true">
+        <filter id="magic-dark" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="
+                -1 -1 -1 0 2.5
+                -1 -1 -1 0 2.5
+                -1 -1 -1 0 2.5
+                 0  0  0 1 0
+            " />
+            <feColorMatrix type="matrix" values="
+                1     0     0     0 0
+                0     1     0     0 0
+                0     0     1     0 0
+                0.333 0.333 0.333 0 0
+            " />
+        </filter>
+    </svg>
+
+    <div class="bg-pattern" aria-hidden="true"></div>
+
+    <main class="container">
+        <!-- Controles Globais -->
+        <header class="global-controls">
+            <div class="lang-controls" role="group" aria-label="Idioma">
+                <button type="button" class="ctrl-btn lang-btn active" id="btn-pt-BR" data-action="set-lang" data-lang="pt-BR" title="Português">🇧🇷</button>
+                <button type="button" class="ctrl-btn lang-btn" id="btn-en-US" data-action="set-lang" data-lang="en-US" title="English">🇺🇸</button>
+                <button type="button" class="ctrl-btn lang-btn" id="btn-es-ES" data-action="set-lang" data-lang="es-ES" title="Español">🇪🇸</button>
+            </div>
+            <button type="button" class="ctrl-btn" id="soundBtn" data-action="toggle-sound" aria-label="Alternar som">🔊</button>
+        </header>
+
+        <!-- Tela Inicial -->
+        <section class="screen active" id="homeScreen">
+            <div class="card">
+                <h1>🧬 AminoRush</h1>
+                <p class="subtitle" data-i18n="subtitle">Domine os aminoácidos</p>
+                <button type="button" class="btn btn-primary" data-action="show-screen" data-target="modeScreen">
+                    <span data-i18n="btnPlay">▶ JOGAR AGORA</span>
+                </button>
+                <button type="button" class="btn btn-secondary" data-action="open-study">
+                    <span data-i18n="btnStudy">📖 Banco de Dados</span>
+                </button>
+                <button type="button" class="btn btn-secondary" data-action="open-achievements">
+                    <span data-i18n="btnAchiev">🏅 Conquistas</span>
+                </button>
+                <button type="button" class="btn btn-secondary" data-action="show-screen" data-target="creditsScreen">
+                    <span data-i18n="btnCredits">👥 Créditos</span>
+                </button>
+                <button type="button" class="btn btn-secondary" data-action="show-screen" data-target="optionsScreen">
+                    <span data-i18n="btnOptions">⚙️ Opções</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela de Opções -->
+        <section class="screen" id="optionsScreen">
+            <div class="card card-compact">
+                <h2 class="screen-title" data-i18n="optionsTitle">⚙️ Opções</h2>
+                <p class="screen-desc" data-i18n="optionsDesc">Salve ou restaure seu progresso.</p>
+
+                <button type="button" class="btn btn-primary" data-action="export-data">
+                    <span data-i18n="btnExport">💾 Exportar Save</span>
+                </button>
+
+                <label for="importFile" class="btn btn-secondary btn-file-label">
+                    <span data-i18n="btnImport">📂 Importar Save</span>
+                </label>
+                <input type="file" id="importFile" accept=".json" hidden>
+
+                <button type="button" class="btn btn-danger-outline btn-spaced" data-action="reset-achievements">
+                    <span data-i18n="btnReset">🗑️ Zerar Conquistas</span>
+                </button>
+
+                <button type="button" class="btn btn-secondary btn-small btn-back" data-action="go-home">
+                    <span data-i18n="btnBack">◀ Voltar</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela de Conquistas -->
+        <section class="screen" id="achievementsScreen">
+            <div class="card card-compact">
+                <h2 class="screen-title" data-i18n="achievTitle">🏅 Galeria de Honra</h2>
+                <p class="screen-desc" data-i18n="achievSubtitle">Desbloqueie medalhas jogando!</p>
+                <div class="achievements-grid" id="achievementsGrid"></div>
+                <button type="button" class="btn btn-secondary btn-small btn-back" data-action="go-home">
+                    <span data-i18n="btnBack">◀ Voltar</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela de Créditos -->
+        <section class="screen" id="creditsScreen">
+            <div class="card card-compact credits-card">
+                <h2 class="screen-title" data-i18n="btnCredits">👥 Créditos</h2>
+
+                <div class="credits-content">
+                    <div class="credits-section">
+                        <h3 class="credits-institution">🏛️ Universidade Federal do Rio Grande do Sul</h3>
+                        <p class="credits-meta">
+                            <strong data-i18n="creditsCourseLabel">Disciplina</strong>:
+                            <span data-i18n="creditsCourseValue">Atividade Integradora II - BIO12042</span>
+                        </p>
+                        <p class="credits-meta">
+                            <strong data-i18n="creditsAdvisorLabel">Orientadora</strong>:
+                            <span data-i18n="creditsAdvisorValue">Professora Dra. Karina Mariante Monteiro</span>
+                        </p>
+                    </div>
+
+                    <div class="credits-section">
+                        <h3 class="credits-section-title" data-i18n="creditsStudentsTitle">👨‍🔬 Alunos envolvidos</h3>
+                        <ul class="credits-list">
+                            <li>Lucas Alfeu Carlotto</li>
+                            <li>Mateo Alfonso Castiglia Pacheco</li>
+                            <li>Rodrigo Hoppe Bressan</li>
+                        </ul>
+                    </div>
+
+                    <div class="credits-section">
+                        <h3 class="credits-section-title" data-i18n="creditsRefsTitle">📚 Referências e Imagens</h3>
+                        <ul class="credits-links">
+                            <li>
+                                <span data-i18n="creditsRefStructures">Imagens das estruturas</span>:
+                                <a href="https://www.sigmaaldrich.com/" target="_blank" rel="noopener noreferrer">sigmaaldrich.com</a>
+                            </li>
+                            <li>
+                                <span data-i18n="creditsRefGlycine">Imagem da Glicina</span>:
+                                <a href="https://www.alamy.com/glycine-amino-acid-chemical-molecule-and-essential-chain-structure-vector-molecular-formula-glycine-formula-with-molecule-atoms-chain-structure-of-image614708635.html?imageid=3629830F-46CF-4AAE-9F7F-B17B2FCFC0D3&amp;pn=1&amp;searchId=28781746b24ec981b7024df3752a3f2f&amp;searchtype=9" target="_blank" rel="noopener noreferrer">alamy.com (Glicina)</a>
+                            </li>
+                            <li>
+                                <span data-i18n="creditsRefAminoAcids">Aminoácidos</span>:
+                                <a href="https://brasilescola.uol.com.br/biologia/aminoacidos.htm" target="_blank" rel="noopener noreferrer">brasilescola.uol.com.br</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="credits-wip-badge">
+                        <span data-i18n="underConstruction">🚧 EM CONSTRUÇÃO 🚧</span>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-secondary btn-small btn-back" data-action="go-home">
+                    <span data-i18n="btnBack">◀ Voltar</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela de Seleção de Modo -->
+        <section class="screen" id="modeScreen">
+            <div class="card card-compact">
+                <h2 class="screen-title mode-title" data-i18n="modeTitle">Escolha o seu Foco</h2>
+
+                <button type="button" class="btn btn-mode-nom" data-action="show-screen" data-target="nomenclatureScreen">
+                    <span data-i18n="m1Title">1️⃣ Nomenclatura</span>
+                    <span class="mode-desc" data-i18n="m1Desc">Apenas siglas e nomes</span>
+                </button>
+                <button type="button" class="btn btn-mode-prop" data-action="select-mode" data-mode="prop">
+                    <span data-i18n="m2Title">2️⃣ Propriedades</span>
+                    <span class="mode-desc" data-i18n="m2Desc">Grupos e características químicas</span>
+                </button>
+                <button type="button" class="btn btn-mode-struc" data-action="select-mode" data-mode="struc">
+                    <span data-i18n="m3Title">3️⃣ Estrutura &amp; Bioquímica</span>
+                    <span class="mode-desc" data-i18n="m3Desc">Fórmulas e dicas complexas</span>
+                </button>
+                <button type="button" class="btn btn-mode-mixed" data-action="select-mode" data-mode="mixed">
+                    <span data-i18n="m4Title">🏆 Modo Completo</span>
+                    <span class="mode-desc" data-i18n="m4Desc">Todos os temas misturados!</span>
+                </button>
+                <button type="button" class="btn btn-mode-arcade" data-action="start-arcade">
+                    <span data-i18n="btnArcade">🕹️ Codon Blitz</span>
+                    <span class="mode-desc" data-i18n="arcadeDesc">Corrida de Síntese Peptídica</span>
+                </button>
+
+                <button type="button" class="btn btn-secondary btn-small btn-back" data-action="go-home">
+                    <span data-i18n="btnBack">◀ Voltar</span>
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Tela de Submodos de Nomenclatura -->
+        <section class="screen" id="nomenclatureScreen">
+            <div class="card card-compact">
+                <h2 class="screen-title" data-i18n="nomSubTitle">1️⃣ Nomenclatura</h2>
+                <p class="screen-desc" data-i18n="nomSubDesc">Escolha o formato de siglas para treinar os 20 aminoácidos (com estrutura visual):</p>
+
+                <button type="button" class="btn btn-submode-1" data-action="select-nomenclature-variant" data-variant="oneLetter">
+                    <span data-i18n="nomVar1Title">🔤 Apenas 1 Letra</span>
+                    <span class="mode-desc" data-i18n="nomVar1Desc">Ex.: Glicina ↔ G · 20 aminoácidos</span>
+                </button>
+
+                <button type="button" class="btn btn-submode-3" data-action="select-nomenclature-variant" data-variant="threeLetters">
+                    <span data-i18n="nomVar3Title">🔠 Apenas 3 Letras</span>
+                    <span class="mode-desc" data-i18n="nomVar3Desc">Ex.: Glicina ↔ Gly · 20 aminoácidos</span>
+                </button>
+
+                <button type="button" class="btn btn-submode-full" data-action="select-nomenclature-variant" data-variant="full">
+                    <span data-i18n="nomVarFullTitle">⚡ Completo (1 e 3 Letras)</span>
+                    <span class="mode-desc" data-i18n="nomVarFullDesc">10 questões de 1 letra + 10 de 3 letras · 20 aminoácidos</span>
+                </button>
+
+                <button type="button" class="btn btn-secondary btn-small btn-back" data-action="show-screen" data-target="modeScreen">
+                    <span data-i18n="btnBack">◀ Voltar</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela de Banco de Dados / Estudo -->
+        <section class="screen" id="studyScreen">
+            <!-- MODO 1: Grid dos 20 Aminoácidos + Painel Lateral Recolhível -->
+            <div class="db-overview" id="dbOverview">
+                <div class="db-topbar">
+                    <div class="db-topbar-left">
+                        <span class="db-brand">🧬 AminoRush</span>
+                        <button type="button" class="btn btn-secondary btn-db-back" data-action="go-home">
+                            <span data-i18n="dbBackMenu">◀ Voltar ao Menu</span>
+                        </button>
+                    </div>
+                    <div class="db-topbar-center">
+                        <h2 class="db-title" data-i18n="dbTitle">BANCO DE DADOS DE AMINOÁCIDOS</h2>
+                    </div>
+                    <div class="db-topbar-spacer" aria-hidden="true"></div>
+                </div>
+
+                <!-- Barra de Pesquisa e Filtros Multi-seleção -->
+                <div class="db-toolbar">
+                    <div class="db-search-box">
+                        <span class="db-search-icon" aria-hidden="true">🔍</span>
+                        <input
+                            type="search"
+                            id="dbSearchInput"
+                            class="db-search-input"
+                            data-i18n-placeholder="dbSearchPlaceholder"
+                            placeholder="Pesquisar por nome, sigla ou códon..."
+                            autocomplete="off"
+                        >
+                        <button type="button" class="db-search-clear" id="dbSearchClear" data-action="db-clear-search" aria-label="Limpar busca" hidden>✕</button>
+                    </div>
+
+                    <div class="db-filters" id="dbFilters" role="group" aria-label="Filtros por grupo químico">
+                        <button type="button" class="db-filter-chip active" data-action="db-filter" data-group="all">
+                            <span data-i18n="dbFilterAll">Todos</span>
+                        </button>
+                        <button type="button" class="db-filter-chip chip-apolar" data-action="db-filter" data-group="nonpolar">
+                            <span data-i18n="dbFilterNonpolar">Apolar</span>
+                        </button>
+                        <button type="button" class="db-filter-chip chip-polar" data-action="db-filter" data-group="polar">
+                            <span data-i18n="dbFilterPolar">Polar</span>
+                        </button>
+                        <button type="button" class="db-filter-chip chip-aromatic" data-action="db-filter" data-group="aromatic">
+                            <span data-i18n="dbFilterAromatic">Aromático</span>
+                        </button>
+                        <button type="button" class="db-filter-chip chip-acid" data-action="db-filter" data-group="acidic">
+                            <span data-i18n="dbFilterAcidic">Ácido</span>
+                        </button>
+                        <button type="button" class="db-filter-chip chip-basic" data-action="db-filter" data-group="basic">
+                            <span data-i18n="dbFilterBasic">Básico</span>
+                        </button>
+                    </div>
+
+                    <div class="db-counter" id="dbCounter">Mostrando: 20 / 20</div>
+                </div>
+
+                <!-- Layout Grid + Painel Lateral (aparece só ao selecionar um card) -->
+                <div class="db-workspace" id="dbWorkspace">
+                    <div class="db-grid-area">
+                        <div class="db-grid" id="dbGrid"></div>
+                        <div class="db-empty" id="dbEmpty" hidden>
+                            <p data-i18n="dbEmpty">Nenhum aminoácido encontrado com esses filtros.</p>
+                            <button type="button" class="btn btn-secondary btn-small" data-action="db-clear-filters">
+                                <span data-i18n="dbClearFilters">Limpar filtros</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <aside class="study-card db-side-panel" id="dbSidePanel" hidden aria-label="Detalhes do aminoácido">
+                        <div class="db-badge-row" id="sideBadges"></div>
+                        <div class="aa-name" id="sideName"></div>
+
+                        <div class="aa-structure-container db-zoomable" data-action="db-open-zoom" title="Clique para ampliar">
+                            <img id="sideStructure" src="" alt="Estrutura Química" hidden>
+                            <div id="sideStructurePlaceholder" class="structure-placeholder" data-i18n="structPlaceholder">🧬 Estrutura Visual em Breve</div>
+                            <span class="db-zoom-badge" aria-hidden="true">🔍</span>
+                        </div>
+
+                        <div class="aa-codes" id="sideCodes"></div>
+                        <div class="study-details" id="sideDetails"></div>
+                        <div class="aa-tip" id="sideTip"></div>
+
+                        <button type="button" class="btn btn-primary btn-db-more" data-action="db-open-full-detail">
+                            <span data-i18n="dbMoreDetails">+ Mais Detalhes</span>
+                        </button>
+
+                        <div class="study-nav">
+                            <button type="button" class="btn btn-secondary btn-small" data-action="prev-card">
+                                <span data-i18n="dbPrev">◀ Anterior</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-small" data-action="next-card">
+                                <span data-i18n="dbNext">Seguinte ▶</span>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary btn-small btn-db-close" data-action="db-close-panel">
+                            <span data-i18n="dbCloseDetails">✖ Fechar Detalhes</span>
+                        </button>
+                    </aside>
+                </div>
+            </div>
+
+            <!-- MODO 2: Visualização Detalhada Focada (+ Mais Detalhes — somente o aminoácido) -->
+            <div class="db-full-detail" id="dbFullDetail" hidden>
+                <div class="db-topbar db-topbar-detail">
+                    <div class="db-topbar-left">
+                        <span class="db-brand">🧬 AminoRush</span>
+                        <button type="button" class="btn btn-secondary btn-db-back" data-action="db-close-full-detail">
+                            <span data-i18n="dbBackGrid">◀ Voltar ao Banco</span>
+                        </button>
+                    </div>
+                    <div class="db-topbar-center">
+                        <h2 class="db-title" data-i18n="dbDetailHeader">VISUALIZAÇÃO DETALHADA</h2>
+                    </div>
+                    <div class="db-topbar-spacer" aria-hidden="true"></div>
+                </div>
+
+                <div class="study-card db-detail-card" id="dbDetailCard">
+                    <div class="db-detail-columns">
+                        <!-- Coluna 1: Identidade + Estrutura + Zoom -->
+                        <div class="db-detail-col-visual">
+                            <div class="db-badge-row" id="fullBadges"></div>
+                            <h3 class="aa-name db-full-name" id="fullName"></h3>
+
+                            <div class="aa-structure-container db-structure-large db-zoomable" data-action="db-open-zoom" title="Clique para ampliar">
+                                <img id="fullStructure" src="" alt="Estrutura Química" hidden>
+                                <div id="fullStructurePlaceholder" class="structure-placeholder" data-i18n="structPlaceholder">🧬 Estrutura Visual em Breve</div>
+                            </div>
+
+                            <div class="aa-codes db-full-codes" id="fullCodes"></div>
+
+                            <button type="button" class="btn btn-secondary btn-small btn-db-zoom" data-action="db-open-zoom">
+                                <span data-i18n="dbZoom">🔍 Zoom</span>
+                            </button>
+                        </div>
+
+                        <!-- Coluna 2: Ficha do Aminoácido + Dica Clássica -->
+                        <div class="db-detail-col-sheet">
+                            <h4 class="db-section-heading" data-i18n="dbCardSheetTitle">Ficha do Aminoácido</h4>
+                            <div class="study-details" id="fullSheetDetails"></div>
+                            <div class="aa-tip" id="fullTip"></div>
+                        </div>
+
+                        <!-- Coluna 3: + Detalhes Bioquímicos e Físico-Químicos -->
+                        <div class="db-detail-col-extra">
+                            <h4 class="db-section-heading db-section-heading-accent" data-i18n="dbExtraDetailsTitle">+ Detalhes</h4>
+                            <div class="study-details db-extra-box" id="fullExtraDetails"></div>
+                        </div>
+                    </div>
+
+                    <div class="db-detail-footer">
+                        <div class="db-detail-nav">
+                            <button type="button" class="btn btn-secondary btn-small" data-action="prev-card">
+                                <span data-i18n="dbPrev">◀ Anterior</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-small" data-action="next-card">
+                                <span data-i18n="dbNext">Seguinte ▶</span>
+                            </button>
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-small btn-db-return" data-action="db-close-full-detail">
+                            <span data-i18n="dbLessDetails">− Menos Detalhes / Voltar ao Banco</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tela de Jogo (Modos Quiz) -->
+        <section class="screen" id="gameScreen">
+            <div class="card card-game" id="gameCard">
+                <div class="game-header-row">
+                    <div class="level-indicator" id="levelIndicator">MODO: CARREGANDO...</div>
+                    <div class="question-progress" id="questionProgress" aria-label="Progresso das questões">1 / 20</div>
+                </div>
+                <div class="top-bar">
+                    <div class="stat-pill timer" id="timerPill">⏱ <span id="timerDisplay">20</span>s</div>
+                    <div class="stat-pill score">⭐ <span id="scoreDisplay">0</span></div>
+                    <div class="stat-pill combo" id="comboPill">🔥 x<span id="comboDisplay">1</span></div>
+                </div>
+                <div class="timer-bar-container">
+                    <div class="timer-bar-fill timer-safe" id="timerBar"></div>
+                </div>
+
+                <div class="question-text" id="questionText">
+                    <img id="gameQuestionImage" src="" alt="Estrutura" hidden>
+                    <span id="questionSpan"></span>
+                </div>
+
+                <div class="btn-grid" id="optionsGrid"></div>
+
+                <div class="justification-panel" id="justificationPanel" hidden aria-live="polite">
+                    <div class="justification-header">
+                        <span class="justification-status" id="justificationStatus"></span>
+                        <span class="justification-aa-pill" id="justificationAAPill"></span>
+                    </div>
+                    <p class="justification-text" id="justificationText"></p>
+                    <button type="button" class="btn btn-primary btn-continue" id="btnContinueQuestion" data-action="continue-question">
+                        <span id="btnContinueLabel" data-i18n="btnContinue">Continuar ▶</span>
+                    </button>
+                    <span class="continue-hint" data-i18n="continueHint">Pressione Enter ou Espaço para continuar</span>
+                </div>
+
+                <div class="powerups-container">
+                    <button type="button" class="btn-powerup" id="btnFiftyFifty" data-action="use-5050">
+                        <span data-i18n="btn5050">⚖️ 50/50</span>
+                    </button>
+                    <button type="button" class="btn-powerup" id="btnFreeze" data-action="use-freeze">
+                        <span data-i18n="btnFreeze">❄️ Congelar</span>
+                    </button>
+                </div>
+
+                <div class="game-footer-actions">
+                    <button type="button" class="btn btn-secondary btn-small" data-action="go-home">
+                        <span data-i18n="btnMenu">🏠 Menu</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-small" data-action="restart-mode">
+                        <span data-i18n="btnRestart">🔄 Reiniciar</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tela do Modo Codon Blitz (Arcade) -->
+        <section class="screen" id="arcadeScreen">
+            <div class="card card-game" id="arcadeCard">
+                <div class="level-indicator level-indicator-arcade" id="arcadeLevelDisplay">NÍVEL 1</div>
+                <div class="top-bar">
+                    <div class="stat-pill timer" id="arcadeTimerPill">⏱ <span id="arcadeTimerDisplay">25</span>s</div>
+                    <div class="stat-pill score">⭐ <span id="arcadeScoreDisplay">0</span></div>
+                    <div class="stat-pill lives">❤️ <span id="arcadeLivesDisplay">3</span></div>
+                </div>
+                <div class="timer-bar-container">
+                    <div class="timer-bar-fill timer-safe" id="arcadeTimerBar"></div>
+                </div>
+
+                <div class="arcade-sequence" id="arcadeSequenceBox"></div>
+                <div class="arcade-grid btn-grid" id="arcadeGrid"></div>
+
+                <div class="powerups-container">
+                    <button type="button" class="btn-powerup" id="btnArcadeRadar" data-action="use-arcade-radar">
+                        <span data-i18n="btnRadar">🔍 Radar</span>
+                    </button>
+                    <button type="button" class="btn-powerup" id="btnArcadeFreeze" data-action="use-arcade-freeze">
+                        <span data-i18n="btnFreeze">❄️ Congelar</span>
+                    </button>
+                </div>
+
+                <div class="game-footer-actions">
+                    <button type="button" class="btn btn-secondary btn-small" data-action="go-home">
+                        <span data-i18n="btnMenu">🏠 Menu</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-small" data-action="start-arcade">
+                        <span data-i18n="btnRestart">🔄 Reiniciar</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tela de Resultado -->
+        <section class="screen" id="resultScreen">
+            <div class="card result-card">
+                <h2 class="result-title" id="resultTitle" data-i18n="resultTitle">🏁 Fim da Rodada!</h2>
+                <div class="result-score" id="resultScore">0</div>
+                <p class="result-points" data-i18n="resultPoints">pontos</p>
+
+                <div class="result-detail">
+                    <div class="result-detail-item">
+                        <div class="value" id="resultAccuracy">0%</div>
+                        <div class="label" id="resultAccLabel" data-i18n="resultAcc">Precisão</div>
+                    </div>
+                    <div class="result-detail-item" id="comboDetailItem">
+                        <div class="value" id="resultMaxCombo">0</div>
+                        <div class="label" data-i18n="resultCombo">Máx Combo</div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="reviewBtn" data-action="review-errors">
+                    <span data-i18n="btnReview">📝 Revisar Erros</span> (<span id="errorCount">0</span>)
+                </button>
+                <button type="button" class="btn btn-success" data-action="restart-mode">
+                    <span data-i18n="btnTryAgain">🔄 Jogar Novamente</span>
+                </button>
+                <button type="button" class="btn btn-secondary" data-action="go-home">
+                    <span data-i18n="btnHome">🏠 Menu Inicial</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela de Revisão de Erros -->
+        <section class="screen" id="reviewScreen">
+            <div class="card">
+                <h2 class="screen-title" data-i18n="reviewTitle">📝 Revisar Erros</h2>
+                <div class="review-list" id="reviewList"></div>
+
+                <button type="button" class="btn btn-secondary btn-spaced" data-action="show-screen" data-target="resultScreen">
+                    <span data-i18n="btnBackResults">◀ Voltar aos Resultados</span>
+                </button>
+                <button type="button" class="btn btn-primary" data-action="restart-mode">
+                    <span data-i18n="btnTryAgain">🔄 Tentar Novamente</span>
+                </button>
+                <button type="button" class="btn btn-secondary" data-action="go-home">
+                    <span data-i18n="btnHome">🏠 Menu Inicial</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Modal de Zoom da Estrutura Química -->
+    <div class="db-zoom-modal" id="dbZoomModal" hidden role="dialog" aria-modal="true" aria-labelledby="zoomTitle">
+        <div class="db-zoom-backdrop" data-action="db-close-zoom"></div>
+        <div class="db-zoom-content">
+            <button type="button" class="db-zoom-close" data-action="db-close-zoom" aria-label="Fechar zoom">✕</button>
+            <div class="db-zoom-header">
+                <h3 id="zoomTitle"></h3>
+                <span class="aa-codes" id="zoomMeta"></span>
+            </div>
+            <div class="db-zoom-image-wrap">
+                <img id="zoomImage" src="" alt="Estrutura ampliada">
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+    <div class="feedback-overlay" id="feedbackOverlay" aria-live="assertive"></div>
+
+    <!-- Ponto de Entrada ES Module (Bloco 4) -->
+    <script type="module" src="./javascript/main.js"></script>
+</body>
+</html>
